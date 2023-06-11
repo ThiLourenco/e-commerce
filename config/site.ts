@@ -2,7 +2,7 @@ export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
   name: "Store 33",
-  description: "Online store of clothes, shoes, bags and accessories.",
+  description: "Loja online de roupas, sapatos, bolsas e acessórios.",
   footer: [
     { name: "Home", href: "/" },
     { name: "About", href: "#" },
