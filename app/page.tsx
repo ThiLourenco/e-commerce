@@ -3,7 +3,6 @@ import { groq } from "next-sanity"
 
 import { SanityProduct } from "@/config/inventory"
 import { siteConfig } from "@/config/site"
-import { seedSanityData } from "@/lib/seed"
 import { cn } from "@/lib/utils"
 import { ProductFilters } from "@/components/product-filters"
 import { ProductGrid } from "@/components/product-grid"
@@ -11,8 +10,8 @@ import { ProductSort } from "@/components/product-sort"
 
 interface Props {
   searchParams: {
-    date?: string;
-    price?: string;
+    date?: string
+    price?: string
   }
 }
 
@@ -36,12 +35,16 @@ export default async function Page({ searchParams }: Props) {
       "slug": slug.current
     }`
   )
-  
+
   return (
     <div>
       <div className="px-4 pt-20 text-center">
-        <h1 className="text-4xl font-extrabold tracking-normal">{siteConfig.name}</h1>
-        <p className="mx-auto mt-4 max-w-3xl text-base">{siteConfig.description}</p>
+        <h1 className="text-4xl font-extrabold tracking-normal">
+          {siteConfig.name}
+        </h1>
+        <p className="mx-auto mt-4 max-w-3xl text-base">
+          {siteConfig.description}
+        </p>
       </div>
       <div>
         <main className="mx-auto max-w-6xl px-6">
@@ -57,18 +60,20 @@ export default async function Page({ searchParams }: Props) {
             <h2 id="products-heading" className="sr-only">
               Products
             </h2>
-            <div className={cn(
+            <div
+              className={cn(
                 "grid grid-cols-1 gap-x-8 gap-y-10",
                 products.length > 0
-                ? "lg:grid-cols-4"
-                : "lg:grid-cols-[1fr_3fr]"
+                  ? "lg:grid-cols-4"
+                  : "lg:grid-cols-[1fr_3fr]"
               )}
             >
-              <div className="hidden lg:block">{/* Product filters */}
-              <ProductFilters />
+              <div className="hidden lg:block">
+                {/* Product filters */}
+                <ProductFilters />
               </div>
               {/* Product grid */}
-              <ProductGrid products={products}/>
+              <ProductGrid products={products} />
             </div>
           </section>
         </main>
