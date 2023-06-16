@@ -37,7 +37,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <SiteHeader />
             <SiteBlob />
             <div className="flex-1">{children}</div>
-            <SiteFooter />
+            {/* <SiteFooter /> */}
           </div>
           </Providers>
         </body>
