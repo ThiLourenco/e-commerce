@@ -46,7 +46,7 @@ export function SiteHeader() {
             <Button size="sm" variant="ghost">
               <ShoppingBag className="h-5 w-5" />
               <span className="ml-2 text-sm font-bold">{cartCount}</span>
-              <span className="sr-only">Cart</span>
+              <span className="sr-only">Sacola</span>
             </Button>
           </Link>
           <ThemeToggle />

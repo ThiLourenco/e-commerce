@@ -30,7 +30,7 @@ export function ProductInfo({ product }: Props) {
     isInCart ? incrementItem(item._id) : addItem(item)
     toast({
       title: `${item.name} (${getSizeName(selectedSize)})`,
-      description: "Produto adicionado no carrinho",
+      description: "Produto adicionado na Sacola de Compras",
       action: (
         <Link href="/cart">
           <Button variant="link" className="gap-x-2 whitespace-nowrap">
@@ -78,7 +78,7 @@ export function ProductInfo({ product }: Props) {
             type="button"
             className="w-full bg-violet-600 py-6 text-base font-medium text-white hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-500"
           >
-            Adicionar no carrinho
+            Adicionar na Sacola
           </Button>
         </div>
       </form>

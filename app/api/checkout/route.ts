@@ -14,6 +14,7 @@ export async function POST(request: Request) {
     mode: "payment",
     payment_method_types: ['card'],
     line_items: lineItems,
+    locale:'pt-BR',
     shipping_address_collection: {
       allowed_countries: ['BR']
     },

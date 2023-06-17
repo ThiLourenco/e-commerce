@@ -22,8 +22,8 @@ import { ProductFilters } from "@/components/product-filters"
 
 const sortOptions = [
   { name: "Lançamentos", value: "/?date=desc" },
-  { name: "Preço, menor para o maior", value: "/?price=asc" },
-  { name: "Preço, maior para o menor", value: "/?price=desc" },
+  { name: "Preço, crescente", value: "/?price=asc" },
+  { name: "Preço, decrescente", value: "/?price=desc" },
 ]
 
 export function ProductSort() {

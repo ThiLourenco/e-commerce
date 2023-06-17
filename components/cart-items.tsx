@@ -22,8 +22,8 @@ export function CartItems() {
   function removeCartItem(product: Product) {
     removeItem(product._id)
     toast({
-      title: `${product.name} removido`,
-      description: "Produto retirado do carrinho",
+      title: `${product.name} - Removido`,
+      description: "Produto retirado da sacola de compras",
       variant: "destructive",
     })
   }
