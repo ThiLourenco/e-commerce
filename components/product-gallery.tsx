@@ -37,7 +37,7 @@ export function ProductGallery() {
       </div>
 
       {/* Main Image */}
-      <div className="aspect-h-1 aspect-w-1 w-full">
+      {/* <div className="aspect-h-1 aspect-w-1 w-full">
         <Image
           priority
           src={"src"}
@@ -46,7 +46,7 @@ export function ProductGallery() {
           height={0}
           className="h-full w-full border-2 border-gray-200 object-cover object-center shadow-sm dark:border-gray-800 sm:rounded-lg"
         />
-      </div>
+      </div> */}
     </div>
   )
 }
