@@ -12,7 +12,7 @@ export function CartItemsEmpty() {
         <XCircle className="h-10 w-10 text-muted-foreground" />
         <h3 className="mt-4 text-lg font-semibold">Nenhum produto adicionado</h3>
         <p className="mb-4 mt-2 text-sm text-muted-foreground">
-          Adicione produtos na Sacola.
+          Adicione produtos na sacola.
         </p>
         <Link href="/">
           <Button size="sm" className="relative">
