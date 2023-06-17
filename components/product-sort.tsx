@@ -46,15 +46,15 @@ export function ProductSort() {
       <Sheet>
         <SheetContent className="w-[300px]">
           <SheetHeader>
-            <SheetTitle>Categories</SheetTitle>
+            <SheetTitle>Filtros</SheetTitle>
             <SheetDescription>
-              Narrow your product search using the options below.
+              Restrinja sua pesquisa de produtos usando as opções abaixo.
             </SheetDescription>
           </SheetHeader>
           <ProductFilters />
         </SheetContent>
         <SheetTrigger className="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden">
-          <span className="sr-only">Filters</span>
+          <span className="sr-only">Filtros</span>
           <Filter className="h-5 w-5" aria-hidden="true" />
         </SheetTrigger>
       </Sheet>

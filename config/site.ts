@@ -5,10 +5,10 @@ export const siteConfig = {
   description: "Loja online de roupas, sapatos, bolsas e acessórios.",
   footer: [
     { name: "Home", href: "/" },
-    { name: "About", href: "#" },
-    { name: "Terms & Conditions", href: "#" },
-    { name: "Shipping & Return Policy", href: "#" },
-    { name: "Privacy Policy", href: "#" },
+    { name: "Sobre", href: "#" },
+    { name: "Termos e Condições", href: "#" },
+    { name: "Política de Envio e Devolução", href: "#" },
+    { name: "Política de Privacidade", href: "#" },
     { name: "FAQ", href: "#" },
   ],
 }

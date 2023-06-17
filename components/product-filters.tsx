@@ -15,11 +15,12 @@ const filters = [
     id: "category",
     name: "Categorias",
     options: [
-      { value: "bags", label: "Bolsas" },
-      { value: "belts", label: "Cintos" },
-      { value: "gloves", label: "Luvas" },
-      { value: "scarves", label: "Lenços" },
+      { value: "bolsas", label: "Bolsas" },
+      { value: "cintos", label: "Cintos" },
+      { value: "luvas", label: "Luvas" },
+      { value: "lencos", label: "Lenços" },
       { value: "wallets", label: "Carteiras" },
+      { value: "oculos", label: "Óculos" },
     ],
   },
   {
@@ -38,11 +39,11 @@ const filters = [
     id: "color",
     name: "Cores",
     options: [
-      { value: "black", label: "Preto" },
-      { value: "blue", label: "Azul" },
-      { value: "brown", label: "Marrom" },
-      { value: "green", label: "Verde" },
-      { value: "yellow", label: "Amarelo" },
+      { value: "preto", label: "Preto" },
+      { value: "azul", label: "Azul" },
+      { value: "marrom", label: "Marrom" },
+      { value: "verde", label: "Verde" },
+      { value: "amarelo", label: "Amarelo" },
     ],
   },
 ]

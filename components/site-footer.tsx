@@ -22,8 +22,7 @@ export function SiteFooter() {
           href="https://www.github.com/thilourenco"
           className="mt-10 block text-center text-xs leading-5"
         >
-          &copy; {new Date().getFullYear()} {siteConfig.name} LLC. All rights
-          reserved.
+          &copy; {new Date().getFullYear()} {siteConfig.name}. Todos os direitos reservados.
         </Link>
       </div>
     </footer>
