@@ -5,3 +5,4 @@
 * Tailwind
 * ReactJS
 * Stripe
+* Shadcn-ui
