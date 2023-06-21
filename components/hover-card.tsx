@@ -20,7 +20,7 @@ export default function Card() {
           Yes. It adheres to the WAI-ARIA design pattern.
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-2">
+      <AccordionItem value="item-3">
         <AccordionTrigger>Informação Adicional</AccordionTrigger>
         <AccordionContent>
           Yes. It adheres to the WAI-ARIA design pattern.
