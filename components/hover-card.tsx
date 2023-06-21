@@ -1,20 +1,31 @@
 import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card"
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 export default function Card() {
   return (
-    <HoverCard>
-      <HoverCardTrigger>Tabela de Medidas</HoverCardTrigger>
-      <HoverCardContent>
-       <table>
-        <tr>
-          Tamanho	Cumprimento Largura
-        </tr>
-       </table>
-      </HoverCardContent>
-    </HoverCard>
+    <Accordion type="single" collapsible>
+      <AccordionItem value="item-1">
+        <AccordionTrigger>Tabela de medidas</AccordionTrigger>
+        <AccordionContent>
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-2">
+        <AccordionTrigger>Composição</AccordionTrigger>
+        <AccordionContent>
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-2">
+        <AccordionTrigger>Informação Adicional</AccordionTrigger>
+        <AccordionContent>
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
   )
 }
