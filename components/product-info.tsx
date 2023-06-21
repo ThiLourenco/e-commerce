@@ -9,6 +9,7 @@ import { SanityProduct } from "@/config/inventory"
 import { getSizeName } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { useToast } from "@/components/ui/use-toast"
+import Card from "./hover-card"
 
 interface Props {
   product: SanityProduct
@@ -69,6 +70,11 @@ export function ProductInfo({ product }: Props) {
             {getSizeName(size)}
           </Button>
         ))}
+        <div className="mt-4">
+          <span>
+              <Card />
+          </span>
+        </div>
       </div>
 
       <form className="mt-6">

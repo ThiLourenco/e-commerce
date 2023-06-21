@@ -50,12 +50,12 @@ export default async function Page({ searchParams }: Props) {
   return (
     <div>
       <div className="px-4 pt-20 text-center">
-        <h1 className="text-4xl font-extrabold tracking-normal">
+        <h1 className="text-5xl font-extrabold tracking-normal">
           {siteConfig.name}
         </h1>
-        <p className="mx-auto mt-4 max-w-3xl text-base">
+        <h2 className="mx-auto mt-4 max-w-3xl text-2xl">
           {siteConfig.description}
-        </p>
+        </h2>
       </div>
       <div>
         <main className="mx-auto max-w-6xl px-6">
