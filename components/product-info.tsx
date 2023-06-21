@@ -9,7 +9,7 @@ import { SanityProduct } from "@/config/inventory"
 import { getSizeName } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { useToast } from "@/components/ui/use-toast"
-import Card from "./hover-card"
+import InformationProduct from "./accordion-product-info"
 
 interface Props {
   product: SanityProduct
@@ -72,7 +72,7 @@ export function ProductInfo({ product }: Props) {
         ))}
         <div className="mt-4">
           <span>
-              <Card />
+              <InformationProduct />
           </span>
         </div>
       </div>
