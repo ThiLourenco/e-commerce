@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 import { ProductFilters } from "@/components/product-filters"
 import { ProductGrid } from "@/components/product-grid"
 import { ProductSort } from "@/components/product-sort"
-import Carousel from "@/components/ui/carrousel"
+import { ImageCarousel } from "@/components/ui/carousel"
 
 interface Props {
   searchParams: {
@@ -54,12 +54,12 @@ export default async function Page({ searchParams }: Props) {
         <h1 className="text-5xl font-extrabold tracking-normal">
           {siteConfig.name}
         </h1>
-        {/* <h2 className="mx-auto mt-4 max-w-3xl text-2xl">
+        <h2 className="mx-auto mt-4 max-w-3xl text-2xl">
           {siteConfig.description}
-        </h2> */}
+        </h2>
       </div>
-      <div >
-        <Carousel />
+      <div className="mx-auto max-w-7xl px-6" >
+      <ImageCarousel />
       </div>
       <div>
         <main className="mx-auto max-w-6xl px-6">
