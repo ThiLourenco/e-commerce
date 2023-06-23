@@ -1,11 +1,12 @@
 import {
-  JetBrains_Mono as FontMono,
-  Plus_Jakarta_Sans as FontSans,
+  Roboto_Mono as FontMono,
+  Lato as FontSans,
 } from "next/font/google"
 
 export const fontSans = FontSans({
-  subsets: ["latin"],
+  subsets: ["latin-ext"],
   variable: "--font-sans",
+  weight: ['400']
 })
 
 export const fontMono = FontMono({
