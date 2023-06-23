@@ -5,7 +5,7 @@ import { Carousel } from '@mantine/carousel';
 export function ImageCarousel() {
   return (
     <div className="">  
-    <Carousel slideSize="100%" height={500} align="center" slideGap="xs" controlsOffset="xl" controlSize={35} loop dragFree>
+    <Carousel slideSize="100%" height={500} align="center" slideGap="xs" controlsOffset="xl" controlSize={30} loop dragFree>
       <Carousel.Slide size={400}>  
       <img className='border rounded-lg' src="https://cdn.sanity.io/images/m8ei9ib0/production/ab4ab219aed08c966943581a6eba72d83c823aa8-680x850.jpg?w=2000&fit=max&auto=format" alt="" />
       </Carousel.Slide>
