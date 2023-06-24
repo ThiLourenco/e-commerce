@@ -1,11 +1,47 @@
 "use client"
 
+import { useRef } from 'react';
 import { Carousel } from '@mantine/carousel';
+import { createStyles, getStylesRef } from '@mantine/core';
+import Autoplay from 'embla-carousel-autoplay';
+
 
 export function ImageCarousel() {
+  const autoplay = useRef(Autoplay({ delay: 2000 }));
+
+  const useStyles = createStyles(() => ({
+    controls: {
+      ref: getStylesRef('controls'),
+      transition: 'opacity 150ms ease',
+      opacity: 0,
+    },
+  
+    root: {
+      '&:hover': {
+        [`& .${getStylesRef('controls')}`]: {
+          opacity: 1,
+        },
+      },
+    },
+  }));
+
+  const { classes } = useStyles();
   return (
     <div className="">  
-    <Carousel slideSize="100%" height={500} align="center" slideGap="xs" controlsOffset="xl" controlSize={30} loop dragFree>
+    <Carousel 
+      classNames={classes}
+      slideSize="100%" 
+      height={500} 
+      align="center" 
+      slideGap="xs" 
+      controlsOffset="xl" 
+      controlSize={30} 
+      loop 
+      dragFree
+      plugins={[autoplay.current]}
+      onMouseEnter={autoplay.current.stop}
+      onMouseLeave={autoplay.current.reset}
+    >
       <Carousel.Slide size={400}>  
       <img className='border rounded-lg' src="https://cdn.sanity.io/images/m8ei9ib0/production/ab4ab219aed08c966943581a6eba72d83c823aa8-680x850.jpg?w=2000&fit=max&auto=format" alt="" />
       </Carousel.Slide>

@@ -81,7 +81,7 @@ export function ProductFilters() {
                       )}
                       id={`filter-${section.id}-${optionIdx}`} 
                       onClick={(event) => { 
-                      const params = new URLSearchParams(searchParams)
+                      const params = new URLSearchParams(searchParams.toString())
                       const checked = event.currentTarget.dataset.state === "checked"
                         checked 
                           ? params.delete(section.id) 
