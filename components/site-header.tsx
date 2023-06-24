@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
-import { Edit, ShoppingBag } from "lucide-react"
+import { Edit, ShoppingBag, LayoutDashboard, LogInIcon } from "lucide-react"
 import { useShoppingCart } from "use-shopping-cart"
 
 import { Button } from "@/components/ui/button"
@@ -50,6 +50,11 @@ export function SiteHeader() {
             </Button>
           </Link>
           <ThemeToggle />
+          <Link href='/login'>
+              <Button size='sm' variant='ghost'>
+                <LogInIcon className='h-5 w-5' />
+              </Button>
+            </Link>
           {process.env.NODE_ENV === 'development' && (
             <Link href='/studio'>
               <Button size='sm' variant='ghost'>
