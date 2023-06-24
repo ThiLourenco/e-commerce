@@ -30,7 +30,7 @@ export function ImageCarousel() {
     <div className="">  
     <Carousel 
       classNames={classes}
-      slideSize="100%" 
+      slideSize="100%"
       height={500} 
       align="center" 
       slideGap="xs" 

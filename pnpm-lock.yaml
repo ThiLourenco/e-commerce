@@ -29,6 +29,9 @@ dependencies:
   '@radix-ui/react-toast':
     specifier: 1.1.4
     version: 1.1.4(@types/react-dom@18.2.6)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
+  '@sanity/image-url':
+    specifier: ^1.0.2
+    version: 1.0.2
   '@sanity/portable-text-editor':
     specifier: 3.12.2
     version: 3.12.2(react-dom@18.2.0)(react@18.2.0)(rxjs@7.8.1)(styled-components@6.0.0-rc.6)
@@ -81,8 +84,8 @@ dependencies:
     specifier: 3.12.2
     version: 3.12.2(@types/node@20.3.1)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.0-rc.6)
   shadcn-ui:
-    specifier: 0.2.1
-    version: 0.2.1
+    specifier: 0.2.2
+    version: 0.2.2
   sharp:
     specifier: 0.32.1
     version: 0.32.1
@@ -161,6 +164,11 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.3
       '@jridgewell/trace-mapping': 0.3.18
+
+  /@antfu/ni@0.21.4:
+    resolution: {integrity: sha512-O0Uv9LbLDSoEg26fnMDdDRiPwFJnQSoD4WnrflDwKCJm8Cx/0mV4cGxwBLXan5mGIrpK4Dd7vizf4rQm0QCEAA==}
+    hasBin: true
+    dev: false
 
   /@babel/cli@7.22.5(@babel/core@7.22.5):
     resolution: {integrity: sha512-N5d7MjzwsQ2wppwjhrsicVDhJSqF9labEP/swYiHhio4Ca2XjEehpgPmerjnLQl7BPE59BLud0PTWGYwqFl/cQ==}
@@ -8598,10 +8606,11 @@ packages:
     dependencies:
       lru-cache: 6.0.0
 
-  /shadcn-ui@0.2.1:
-    resolution: {integrity: sha512-Zax2Vyl79ugFpdt58KzLNhHzKgNvHE0PrD5iGeoifMpDERy/39C4Vc/fvn8jcZnLie1H+Brlx/g1CMwKjmxAOQ==}
+  /shadcn-ui@0.2.2:
+    resolution: {integrity: sha512-T76EeZymSB45Yz63gkYOv9P0Ke+UA9IZenysx+975nyNzXxU7HRBgfwuHiMcrcubtOLrzRVedTLX3lcOMqDeRQ==}
     hasBin: true
     dependencies:
+      '@antfu/ni': 0.21.4
       chalk: 5.2.0
       commander: 10.0.1
       cosmiconfig: 8.2.0
