@@ -1,15 +1,15 @@
-"use client"
+'use client'
 
-import { useState } from "react"
-import Link from "next/link"
-import { ArrowRight, ArrowLeft } from "lucide-react"
-import { formatCurrencyString, useShoppingCart } from "use-shopping-cart"
+import { useState } from 'react'
+import Link from 'next/link'
+import { ArrowRight, ArrowLeft } from 'lucide-react'
+import { formatCurrencyString, useShoppingCart } from 'use-shopping-cart'
 
-import { SanityProduct } from "@/config/inventory"
-import { getSizeName } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { useToast } from "@/components/ui/use-toast"
-import InformationProduct from "./accordion-product-info"
+import { SanityProduct } from '@/config/inventory'
+import { getSizeName } from '@/lib/utils'
+import { Button } from '@/components/ui/button'
+import { useToast } from '@/components/ui/use-toast'
+import InformationProduct from './accordion-product-info'
 
 interface Props {
   product: SanityProduct
@@ -25,13 +25,13 @@ export function ProductInfo({ product }: Props) {
     const item = {
       ...product,
       product_data: {
-        size: selectedSize
-      }
+        size: selectedSize,
+      },
     }
     isInCart ? incrementItem(item._id) : addItem(item)
     toast({
       title: `${item.name} (${getSizeName(selectedSize)})`,
-      description: "Produto adicionado na Sacola de Compras",
+      description: 'Produto adicionado na Sacola de Compras',
       action: (
         <Link href="/cart">
           <Button variant="link" className="gap-x-2 whitespace-nowrap">
@@ -39,19 +39,26 @@ export function ProductInfo({ product }: Props) {
             <ArrowRight className="h-5 w-5" />
           </Button>
         </Link>
-      )
+      ),
     })
   }
 
   return (
     <div className="mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0">
-      <div className="justify-between flex">
-      <h1 className="text-3xl font-bold tracking-tight">{product.name}</h1>
-      <Link href={"/"}><ArrowLeft className='h-5 w-5' /></Link>
+      <div className="flex justify-between">
+        <h1 className="text-3xl font-bold tracking-tight">{product.name}</h1>
+        <Link href={'/'}>
+          <ArrowLeft className="h-5 w-5" />
+        </Link>
       </div>
       <div className="mt-3">
         <h2 className="sr-only">Product information</h2>
-        <p className="text-3xl tracking-tight">{formatCurrencyString({ value: product.price, currency: product.currency })}</p>
+        <p className="text-3xl tracking-tight">
+          {formatCurrencyString({
+            value: product.price,
+            currency: product.currency,
+          })}
+        </p>
       </div>
 
       <div className="mt-6">
@@ -64,17 +71,18 @@ export function ProductInfo({ product }: Props) {
           Tamanho: <strong>{getSizeName(selectedSize)}</strong>
         </p>
         {product.sizes.map((size) => (
-          <Button 
+          <Button
             onClick={() => setSelectedSize(size)}
-            key={size} 
-            variant={selectedSize === size ? "default" : "outline"} className="mr-2 mt-4"
+            key={size}
+            variant={selectedSize === size ? 'default' : 'outline'}
+            className="mr-2 mt-4"
           >
             {getSizeName(size)}
           </Button>
         ))}
         <div className="mt-4">
           <span>
-              <InformationProduct />
+            <InformationProduct />
           </span>
         </div>
       </div>

@@ -1,27 +1,33 @@
-"use client"
+'use client'
 
-import { useState } from "react"
-import { Loader2 } from "lucide-react"
-import { formatCurrencyString, useShoppingCart } from "use-shopping-cart"
+import { useState } from 'react'
+import { Loader2 } from 'lucide-react'
+import { formatCurrencyString, useShoppingCart } from 'use-shopping-cart'
 
-import { Button } from "@/components/ui/button"
+import { Button } from '@/components/ui/button'
 
 export function CartSummary() {
-  const { formattedTotalPrice, totalPrice, cartDetails, cartCount, redirectToCheckout } = useShoppingCart()
+  const {
+    formattedTotalPrice,
+    totalPrice,
+    cartDetails,
+    cartCount,
+    redirectToCheckout,
+  } = useShoppingCart()
   const [isLoading, setIsLoading] = useState(false)
   const isDisabled = isLoading || cartCount! === 0
   const shippingAmount = cartCount! > 0 ? 500 : 0
   const totalAmount = totalPrice! + shippingAmount
 
   async function onCheckout() {
-    setIsLoading(true)  
+    setIsLoading(true)
     const response = await fetch('/api/checkout', {
-      method: "POST",
-      body: JSON.stringify(cartDetails)
+      method: 'POST',
+      body: JSON.stringify(cartDetails),
     })
     const data = await response.json()
     const result = await redirectToCheckout(data.id)
-    if(result?.error) {
+    if (result?.error) {
       console.error(result)
     }
     setIsLoading(false)
@@ -45,22 +51,22 @@ export function CartSummary() {
           <dt className="flex items-center text-sm">
             <span>Valor do Frete</span>
           </dt>
-          <dd className="text-sm font-medium">{formatCurrencyString({ value: shippingAmount, currency: "BRL" })}</dd>
+          <dd className="text-sm font-medium">
+            {formatCurrencyString({ value: shippingAmount, currency: 'BRL' })}
+          </dd>
         </div>
         <div className="flex items-center justify-between border-t border-gray-200 pt-4 dark:border-gray-600">
           <dt className="text-base font-medium">Total do Pedido</dt>
-          <dd className="text-base font-medium">{formatCurrencyString({ value: totalAmount, currency: "BRL" })}</dd>
+          <dd className="text-base font-medium">
+            {formatCurrencyString({ value: totalAmount, currency: 'BRL' })}
+          </dd>
         </div>
       </dl>
 
       <div className="mt-6">
-        <Button
-          onClick={onCheckout}
-          className="w-full"
-          disabled={isDisabled}
-        >
+        <Button onClick={onCheckout} className="w-full" disabled={isDisabled}>
           {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-          {isLoading ? "Carregando..." :  "Checkout" }
+          {isLoading ? 'Carregando...' : 'Checkout'}
         </Button>
       </div>
     </section>

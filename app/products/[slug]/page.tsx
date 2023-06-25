@@ -1,13 +1,13 @@
-import { client } from "@/sanity/lib/client"
-import { groq } from "next-sanity"
+import { client } from '@/sanity/lib/client'
+import { groq } from 'next-sanity'
 
-import { SanityProduct } from "@/config/inventory"
-import { ProductGallery } from "@/components/product-gallery"
-import { ProductInfo } from "@/components/product-info"
+import { SanityProduct } from '@/config/inventory'
+import { ProductGallery } from '@/components/product-gallery'
+import { ProductInfo } from '@/components/product-info'
 
 interface Props {
   params: {
-    slug: string;
+    slug: string
   }
 }
 
@@ -27,7 +27,7 @@ export default async function Page({ params }: Props) {
       categories,
       colors,
       "slug": slug.current
-  }`
+  }`,
   )
 
   return (

@@ -1,18 +1,18 @@
-"use client"
+'use client'
 
-import { useState } from "react"
-import Image from "next/image"
-import { urlForImage } from "@/sanity/lib/image"
+import { useState } from 'react'
+import Image from 'next/image'
+import { urlForImage } from '@/sanity/lib/image'
 
-import { SanityProduct } from "@/config/inventory"
-import { shimmer, toBase64 } from "@/lib/image"
+import { SanityProduct } from '@/config/inventory'
+import { shimmer, toBase64 } from '@/lib/image'
 
 interface Props {
   product: SanityProduct
 }
 
 export function ProductGallery({ product }: Props) {
-  const [selectedImage, setSelectImage ] = useState(0)
+  const [selectedImage, setSelectImage] = useState(0)
 
   return (
     <div className="flex flex-col-reverse">
@@ -34,15 +34,17 @@ export function ProductGallery({ product }: Props) {
                   className="h-full w-full object-cover object-center "
                   placeholder="blur"
                   blurDataURL={`data:image/svg+xml;base64,${toBase64(
-                  shimmer(200, 200)
-              )}`}
+                    shimmer(200, 200),
+                  )}`}
                 />
               </span>
               {/* border in selected image */}
-              {index === selectedImage &&  (<span
-                className="pointer-events-none absolute inset-0 rounded-md ring-4 ring-indigo-500 ring-offset-2"
-                aria-hidden="true"
-              />)}
+              {index === selectedImage && (
+                <span
+                  className="pointer-events-none absolute inset-0 rounded-md ring-4 ring-indigo-500 ring-offset-2"
+                  aria-hidden="true"
+                />
+              )}
             </div>
           ))}
         </ul>
@@ -53,12 +55,12 @@ export function ProductGallery({ product }: Props) {
         <Image
           priority
           src={urlForImage(product.images[selectedImage]).url()}
-          alt={`Main ${product.name} image`} 
+          alt={`Main ${product.name} image`}
           width={600}
           height={750}
           placeholder="blur"
-            blurDataURL={`data:image/svg+xml;base64,${toBase64(
-            shimmer(200, 200)
+          blurDataURL={`data:image/svg+xml;base64,${toBase64(
+            shimmer(200, 200),
           )}`}
           className="h-full w-full border-2 border-gray-200 object-cover object-center shadow-sm dark:border-gray-800 sm:rounded-lg"
         />

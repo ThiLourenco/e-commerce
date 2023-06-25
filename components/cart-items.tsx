@@ -1,18 +1,18 @@
-"use client"
+'use client'
 
-import Image from "next/image"
-import Link from "next/link"
-import { urlForImage } from "@/sanity/lib/image"
-import { Clock, X } from "lucide-react"
-import { formatCurrencyString, useShoppingCart } from "use-shopping-cart"
-import { Product } from "use-shopping-cart/core"
+import Image from 'next/image'
+import Link from 'next/link'
+import { urlForImage } from '@/sanity/lib/image'
+import { Clock, X } from 'lucide-react'
+import { formatCurrencyString, useShoppingCart } from 'use-shopping-cart'
+import { Product } from 'use-shopping-cart/core'
 
-import { shimmer, toBase64 } from "@/lib/image"
-import { getSizeName } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { useToast } from "@/components/ui/use-toast"
-import { CartItemsEmpty } from "@/components/cart-items-empty"
+import { shimmer, toBase64 } from '@/lib/image'
+import { getSizeName } from '@/lib/utils'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { useToast } from '@/components/ui/use-toast'
+import { CartItemsEmpty } from '@/components/cart-items-empty'
 
 export function CartItems() {
   const { cartDetails, removeItem, setItemQuantity } = useShoppingCart()
@@ -23,12 +23,12 @@ export function CartItems() {
     removeItem(product._id)
     toast({
       title: `${product.name} - Removido`,
-      description: "Produto retirado da sacola de compras",
-      variant: "destructive",
+      description: 'Produto retirado da sacola de compras',
+      variant: 'destructive',
     })
   }
 
-  if(cartItems.length === 0) return <CartItemsEmpty />
+  if (cartItems.length === 0) return <CartItemsEmpty />
 
   return (
     <ul
@@ -39,14 +39,14 @@ export function CartItems() {
         <li key={product._id} className="flex py-6 sm:py-10">
           <div className="shrink-0">
             <Image
-            src={urlForImage(product.images[0]).url()}
-            width={200}
-            height={200}
-            alt={product.name}
-            placeholder="blur"
-            blurDataURL={`data:image/svg+xml;base64,${toBase64(
-            shimmer(200, 200)
-        )}`}
+              src={urlForImage(product.images[0]).url()}
+              width={200}
+              height={200}
+              alt={product.name}
+              placeholder="blur"
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                shimmer(200, 200),
+              )}`}
               className="h-24 w-24 rounded-md border-2 border-gray-200 object-cover object-center dark:border-gray-800 sm:h-48 sm:w-48"
             />
           </div>
@@ -56,12 +56,20 @@ export function CartItems() {
               <div>
                 <div className="flex justify-between">
                   <h3 className="text-sm">
-                    <Link href={`/products/${product.slug}`} className="font-medium">
+                    <Link
+                      href={`/products/${product.slug}`}
+                      className="font-medium"
+                    >
                       {product.name}
                     </Link>
                   </h3>
                 </div>
-                <p className="mt-1 text-sm font-medium">{formatCurrencyString({ value: product.price, currency: product.currency })}</p>
+                <p className="mt-1 text-sm font-medium">
+                  {formatCurrencyString({
+                    value: product.price,
+                    currency: product.currency,
+                  })}
+                </p>
                 <p className="mt-1 text-sm font-medium">
                   Tamanho: {/* @ts-ignore */}
                   <strong>{getSizeName(product.product_data?.size)}</strong>
@@ -80,7 +88,9 @@ export function CartItems() {
                   min={1}
                   max={10}
                   value={product.quantity}
-                  onChange={event => setItemQuantity(product._id, Number(event.target.value))}
+                  onChange={(event) =>
+                    setItemQuantity(product._id, Number(event.target.value))
+                  }
                 />
                 <div className="absolute right-0 top-0">
                   <Button

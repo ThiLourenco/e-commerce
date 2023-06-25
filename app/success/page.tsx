@@ -1,16 +1,16 @@
-import Link from "next/link"
+import Link from 'next/link'
 
-import { stripe } from "@/lib/stripe"
-import { CheckoutSession } from "@/components/checkout-session"
+import { stripe } from '@/lib/stripe'
+import { CheckoutSession } from '@/components/checkout-session'
 
 interface Props {
   searchParams: {
-    session_id?: string;
+    session_id?: string
   }
 }
 
 export default async function Page({ searchParams }: Props) {
-  const sessionId = searchParams?.session_id ?? ""
+  const sessionId = searchParams?.session_id ?? ''
   const checkoutSession = await stripe.checkout.sessions.retrieve(sessionId)
   const customerDetails = checkoutSession?.customer_details
 
@@ -27,8 +27,8 @@ export default async function Page({ searchParams }: Props) {
             Continuar comprando
           </Link>
           <a href="#" className="text-sm font-semibold">
-          Entre em contato com o suporte
-          <span aria-hidden="true"> &rarr;</span>
+            Entre em contato com o suporte
+            <span aria-hidden="true"> &rarr;</span>
           </a>
         </div>
       </div>

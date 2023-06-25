@@ -1,7 +1,7 @@
-"use client"
+'use client'
 
-import { useRouter } from "next/navigation"
-import { Filter } from "lucide-react"
+import { useRouter } from 'next/navigation'
+import { Filter } from 'lucide-react'
 
 import {
   Select,
@@ -9,7 +9,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from '@/components/ui/select'
 import {
   Sheet,
   SheetContent,
@@ -17,17 +17,17 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet"
-import { ProductFilters } from "@/components/product-filters"
+} from '@/components/ui/sheet'
+import { ProductFilters } from '@/components/product-filters'
 
 const sortOptions = [
-  { name: "Lançamentos", value: "/?date=desc" },
-  { name: "Preço, crescente", value: "/?price=asc" },
-  { name: "Preço, decrescente", value: "/?price=desc" },
+  { name: 'Lançamentos', value: '/?date=desc' },
+  { name: 'Preço, crescente', value: '/?price=asc' },
+  { name: 'Preço, decrescente', value: '/?price=desc' },
 ]
 
 export function ProductSort() {
-  const router = useRouter();
+  const router = useRouter()
 
   return (
     <div className="flex items-center">
@@ -36,10 +36,10 @@ export function ProductSort() {
           <SelectValue placeholder="Ordenar por" />
         </SelectTrigger>
         <SelectContent>
-          {sortOptions.map(option => (
+          {sortOptions.map((option) => (
             <SelectItem key={option.name} value={option.value}>
-            {option.name}
-            </SelectItem>    
+              {option.name}
+            </SelectItem>
           ))}
         </SelectContent>
       </Select>

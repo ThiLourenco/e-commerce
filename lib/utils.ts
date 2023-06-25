@@ -1,5 +1,5 @@
-import { clsx, type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { clsx, type ClassValue } from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -7,15 +7,15 @@ export function cn(...inputs: ClassValue[]) {
 
 export function getSizeName(value: string) {
   switch (value) {
-    case "p":
-      return "Pequeno"
-    case "m":
-      return "Médio"
-    case "g":
-      return "Grande"
-    case "gg":
-      return "X-Grande"
-    case "unico":
-      return "Único"
+    case 'p':
+      return 'Pequeno'
+    case 'm':
+      return 'Médio'
+    case 'g':
+      return 'Grande'
+    case 'gg':
+      return 'X-Grande'
+    case 'unico':
+      return 'Único'
   }
 }

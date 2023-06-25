@@ -1,9 +1,9 @@
-"use client"
+'use client'
 
-import { useEffect } from "react"
-import { CheckCheck, XCircle } from "lucide-react"
-import Stripe from "stripe"
-import { useShoppingCart } from "use-shopping-cart"
+import { useEffect } from 'react'
+import { CheckCheck, XCircle } from 'lucide-react'
+import Stripe from 'stripe'
+import { useShoppingCart } from 'use-shopping-cart'
 
 interface Props {
   customerDetails: Stripe.Checkout.Session.CustomerDetails | null
@@ -13,7 +13,7 @@ export function CheckoutSession({ customerDetails }: Props) {
   const { clearCart } = useShoppingCart()
 
   useEffect(() => {
-    if(customerDetails) {
+    if (customerDetails) {
       clearCart()
     }
   }, [customerDetails])
@@ -23,7 +23,7 @@ export function CheckoutSession({ customerDetails }: Props) {
       <>
         <XCircle className="mx-auto h-10 w-10 text-red-400" />
         <h1 className="mt-4 text-3xl font-bold tracking-tight text-red-400 sm:text-5xl">
-        Nenhuma sessão de checkout encontrada
+          Nenhuma sessão de checkout encontrada
         </h1>
       </>
     )
@@ -33,14 +33,17 @@ export function CheckoutSession({ customerDetails }: Props) {
     <>
       <CheckCheck className="mx-auto h-10 w-10 text-lime-500 dark:text-lime-400" />
       <h1 className="mt-4 text-3xl font-bold tracking-tight text-lime-500 dark:text-lime-400 sm:text-5xl">
-      Pedido realizado com sucesso!
+        Pedido realizado com sucesso!
       </h1>
       <h3 className="mt-8 text-2xl leading-7">
-        Agradecemos pela sua preferência, <span className="font-extrabold">{customerDetails.name}</span>!
+        Agradecemos pela sua preferência,{' '}
+        <span className="font-extrabold">{customerDetails.name}</span>!
       </h3>
       <p className="mt-8">
-      Verifique seu e-mail de compra{""}
-        <span className="mx-1 font-extrabold text-indigo-500">{customerDetails.email}</span>
+        Verifique seu e-mail de compra{''}
+        <span className="mx-1 font-extrabold text-indigo-500">
+          {customerDetails.email}
+        </span>
         para detalhes o seu pedido.
       </p>
     </>
