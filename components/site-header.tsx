@@ -5,6 +5,7 @@ import { SyntheticEvent } from 'react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { Edit, ShoppingBag, LogInIcon } from 'lucide-react'
 import { useShoppingCart } from 'use-shopping-cart'
+import { UserButton } from '@clerk/nextjs'
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -53,11 +54,12 @@ export function SiteHeader() {
             </Button>
           </Link>
           <ThemeToggle />
-          <Link href="/login">
+          <Link href="/sign-in">
             <Button size="sm" variant="ghost">
               <LogInIcon className="h-5 w-5" />
             </Button>
           </Link>
+          <UserButton afterSignOutUrl="/" />
           {process.env.NODE_ENV === 'development' && (
             <Link href="/studio">
               <Button size="sm" variant="ghost">
