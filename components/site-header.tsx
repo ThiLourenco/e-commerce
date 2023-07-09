@@ -48,7 +48,7 @@ export function SiteHeader() {
         </form>
         <div className="flex items-center space-x-1">
           <SignedIn>
-            <li className="text-sm font-medium  tracking-wider">
+            <li className="text-sm font-medium tracking-wider">
               <Link href="/dashboard">Meus Pedidos</Link>
             </li>
           </SignedIn>
@@ -61,7 +61,8 @@ export function SiteHeader() {
 
           <SignedOut>
             <SignInButton mode="redirect">
-              <button>
+              <button className="flex gap-2">
+                Meus Pedidos
                 <LogInIcon className="h-5 w-5" />
               </button>
             </SignInButton>
