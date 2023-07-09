@@ -28,17 +28,17 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
-      <ClerkProvider
-        localization={ptBR}
-        appearance={{ baseTheme: neobrutalism }}
-      >
-        <html lang="pt-BR" suppressHydrationWarning>
-          <head />
-          <body
-            className={cn(
-              'min-h-screen bg-background font-sans antialiased',
-              fontSans.variable,
-            )}
+      <html lang="pt-BR" suppressHydrationWarning>
+        <head />
+        <body
+          className={cn(
+            'min-h-screen bg-background font-sans antialiased',
+            fontSans.variable,
+          )}
+        >
+          <ClerkProvider
+            localization={ptBR}
+            appearance={{ baseTheme: neobrutalism }}
           >
             <Providers>
               <div className="relative flex min-h-screen flex-col">
@@ -48,9 +48,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <SiteFooter />
               </div>
             </Providers>
-          </body>
-        </html>
-      </ClerkProvider>
+          </ClerkProvider>
+        </body>
+      </html>
     </>
   )
 }

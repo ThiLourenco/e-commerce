@@ -3,9 +3,10 @@
 import Link from 'next/link'
 import { SyntheticEvent } from 'react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import { Edit, ShoppingBag, LogInIcon } from 'lucide-react'
+import { Edit, LogInIcon, ShoppingBag } from 'lucide-react'
 import { useShoppingCart } from 'use-shopping-cart'
-import { UserButton } from '@clerk/nextjs'
+import { SignInButton, UserButton } from '@clerk/nextjs'
+import { SignedIn, SignedOut } from '@clerk/nextjs/app-beta/client'
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -46,6 +47,28 @@ export function SiteHeader() {
           />
         </form>
         <div className="flex items-center space-x-1">
+          <SignedIn>
+            <li className="text-sm font-medium  tracking-wider">
+              <Link href="/dashboard">Meus Pedidos</Link>
+            </li>
+          </SignedIn>
+
+          <SignedIn>
+            <Button variant="ghost" size="sm">
+              <UserButton />
+            </Button>
+          </SignedIn>
+
+          <SignedOut>
+            <SignInButton mode="redirect">
+              <button>
+                <LogInIcon className="h-5 w-5" />
+              </button>
+            </SignInButton>
+          </SignedOut>
+
+          <ThemeToggle />
+
           <Link href="/cart">
             <Button size="sm" variant="ghost">
               <ShoppingBag className="h-5 w-5" />
@@ -53,13 +76,7 @@ export function SiteHeader() {
               <span className="sr-only">Sacola</span>
             </Button>
           </Link>
-          <ThemeToggle />
-          <Link href="/sign-in">
-            <Button size="sm" variant="ghost">
-              <LogInIcon className="h-5 w-5" />
-            </Button>
-          </Link>
-          <UserButton afterSignOutUrl="/" />
+
           {process.env.NODE_ENV === 'development' && (
             <Link href="/studio">
               <Button size="sm" variant="ghost">
