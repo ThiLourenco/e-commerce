@@ -61,7 +61,7 @@ export function SiteHeader() {
 
           <SignedOut>
             <SignInButton mode="redirect">
-              <button className="flex gap-2">
+              <button className="flex gap-2 p-2">
                 Meus Pedidos
                 <LogInIcon className="h-5 w-5" />
               </button>
