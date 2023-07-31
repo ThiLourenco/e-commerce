@@ -20,8 +20,8 @@ const Dashboard = () => {
             Detalhes do pedido
           </h1>
 
-          <div className="mt-12 lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12 xl:gap-x-16">
-            <section className="lg:col-span-12">
+          <div className="mx-auto max-w-2xl ">
+            <section className="lg:grid-cols-24 lg:grid lg:items-start lg:gap-x-12 xl:gap-x-16">
               <h2 id="orders-heading" className="sr-only">
                 Verifique o status de pedidos recentes e antigos e descubra mais
                 produtos

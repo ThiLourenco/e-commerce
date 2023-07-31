@@ -26,8 +26,8 @@ export default async function Page({ searchParams }: Props) {
           >
             Continuar comprando
           </Link>
-          <a href="#" className="text-sm font-semibold">
-            Entre em contato com o suporte
+          <a href="/dashboard" className="text-sm font-semibold">
+            Meus Pedidos
             <span aria-hidden="true"> &rarr;</span>
           </a>
         </div>
