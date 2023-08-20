@@ -47,7 +47,7 @@ export function ProductInfo({ product }: Props) {
     <div className="mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0">
       <div className="flex justify-between">
         <h1 className="text-3xl font-bold tracking-tight">{product.name}</h1>
-        <Link href={'/'}>
+        <Link href={'/products/'}>
           <ArrowLeft className="h-5 w-5" />
         </Link>
       </div>

@@ -30,7 +30,8 @@ const filters = [
       { value: 'p', label: 'Pequeno' },
       { value: 'm', label: 'Médio' },
       { value: 'g', label: 'Grande' },
-      { value: 'gg', label: 'X-Grande' },
+      { value: 'gg', label: 'GG' },
+      { value: 'xg', label: 'XG' },
       { value: 'unico', label: 'Único' },
     ],
   },
@@ -91,7 +92,7 @@ export function ProductFilters() {
                         checked
                           ? params.delete(section.id)
                           : params.set(section.id, option.value)
-                        router.replace(`/?${params.toString()}`)
+                        router.replace(`/products/?${params.toString()}`)
                       }}
                     />
                     <label

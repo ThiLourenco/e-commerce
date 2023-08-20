@@ -16,7 +16,7 @@ export function CartItemsEmpty() {
         <p className="mb-4 mt-2 text-sm text-muted-foreground">
           Adicione produtos na sacola.
         </p>
-        <Link href="/">
+        <Link href="/products">
           <Button size="sm" className="relative">
             <Plus className="mr-2 h-4 w-4" />
             Adicionar Produto

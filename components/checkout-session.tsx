@@ -10,6 +10,7 @@ interface Props {
 }
 
 export function CheckoutSession({ customerDetails }: Props) {
+  console.log(customerDetails, 'customerDetails')
   const { clearCart } = useShoppingCart()
 
   useEffect(() => {
