@@ -22,7 +22,7 @@ export function SiteHeader() {
 
   if (pathname.startsWith('/studio')) return null
 
-  function onSubmit(event: SyntheticEvent<HTMLFormElement>) {
+  function onChange(event: SyntheticEvent<HTMLFormElement>) {
     event.preventDefault()
     const formData = new FormData(event.currentTarget)
     const searchQuery = formData.get('search')
@@ -34,7 +34,7 @@ export function SiteHeader() {
         <MainNav />
         {pathname !== '/' && (
           <form
-            onSubmit={onSubmit}
+            onChange={onChange}
             className="hidden items-center lg:inline-flex"
           >
             <Input
