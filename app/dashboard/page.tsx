@@ -52,7 +52,7 @@ const Dashboard: React.FC = () => {
             Detalhes do pedido
           </h1>
 
-          <div className="flex w-80 flex-col">
+          <div className="mt-10 flex flex-col xs:w-80 sm:w-9/12 lg:w-full">
             <h2 id="orders-heading" className="sr-only">
               Verifique o status de pedidos recentes e antigos e descubra mais
               produtos
