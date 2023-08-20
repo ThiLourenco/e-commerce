@@ -1,81 +1,59 @@
-'use client'
+import React from 'react'
+interface Order {
+  id: number
+  orderNumber: string
+  date: string
+  value: string
+  trackingLink: string
+  status: string
+}
 
-export function OrderItem() {
+interface OrderListProps {
+  orders: Order[]
+}
+
+const OrderList: React.FC<OrderListProps> = ({ orders }) => {
   return (
-    <>
-      <div className="bg-gray-0 relative mb-4 mt-16 overflow-x-auto rounded-lg border-2 border-gray-700 px-4 py-6 shadow-md dark:border-gray-900 dark:bg-black sm:rounded-lg sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8">
-        <table className="w-full text-left text-sm text-gray-500 dark:text-gray-400">
-          <thead className="ext-xs bg-gray-200  text-gray-700 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-              <th scope="col" className="px-6 py-3">
-                N° Pedido
-              </th>
-              <th scope="col" className="px-6 py-3">
-                Data
-              </th>
-              <th scope="col" className="px-6 py-3">
-                Valor
-              </th>
-              <th scope="col" className="px-6 py-3">
-                Rastreamento
-              </th>
-              <th scope="col" className="px-6 py-3">
-                Status
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="border-b bg-white hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600">
-              <th
-                scope="row"
-                className="whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white"
-              >
-                #4619
-              </th>
-              <td className="whitespace-nowrap px-6 py-4">
-                01 de Julho de 2023
+    <div className="overflow-x-auto">
+      <table className="w-full text-left text-sm text-gray-500 dark:text-gray-400">
+        <thead className="bg-gray-200 text-xs text-gray-700 dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+            <th className="px-3 py-2 sm:px-6">N° Pedido</th>
+            <th className="px-3 py-2 sm:px-6">Data</th>
+            <th className="px-3 py-2 sm:px-6">Valor</th>
+            <th className="px-3 py-2 sm:px-6">Rastreamento</th>
+            <th className="px-3 py-2 sm:px-6">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {orders.map((order) => (
+            <tr
+              key={order.id}
+              className="border-b bg-white hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600"
+            >
+              <td className="whitespace-nowrap px-3 py-2 font-medium text-gray-900 dark:text-white sm:px-6">
+                #{order.orderNumber}
               </td>
-              <td className="whitespace-nowrap px-6 py-4">R$ 420,00 </td>
-              <td className="whitespace-nowrap px-6 py-4">
-                <a
-                  href="https://rastreamento.correios.com.br/app/index.php"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+              <td className="whitespace-nowrap px-3 py-2 sm:px-6">
+                {order.date}
+              </td>
+              <td className="whitespace-nowrap px-3 py-2 sm:px-6">
+                {order.value}
+              </td>
+              <td className="whitespace-nowrap px-3 py-2 sm:px-6">
+                <a href={order.trackingLink} target="_blank" rel="noreferrer">
                   Link
                 </a>
               </td>
-              <td className="whitespace-nowrap px-6 py-4 text-yellow-400">
-                Pendente
+              <td className="whitespace-nowrap px-3 py-2 text-yellow-400 sm:px-6">
+                {order.status}
               </td>
             </tr>
-            <tr className="border-b bg-white hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600">
-              <th
-                scope="row"
-                className="whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white"
-              >
-                #4196
-              </th>
-              <td className="whitespace-nowrap px-6 py-4">
-                02 de Julho de 2023
-              </td>
-              <td className="whitespace-nowrap px-6 py-4">R$ 520,00 </td>
-              <td className="whitespace-nowrap px-6 py-4">
-                <a
-                  href="https://rastreamento.correios.com.br/app/index.php"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Link
-                </a>
-              </td>
-              <td className="whitespace-nowrap px-6 py-4 text-green-300">
-                Entregue
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </>
+          ))}
+        </tbody>
+      </table>
+    </div>
   )
 }
+
+export default OrderList

@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import { CheckCheck, XCircle } from 'lucide-react'
 import Stripe from 'stripe'
 import { useShoppingCart } from 'use-shopping-cart'
+import { Widget } from './Widget'
 
 interface Props {
   customerDetails: Stripe.Checkout.Session.CustomerDetails | null
@@ -47,6 +48,7 @@ export function CheckoutSession({ customerDetails }: Props) {
         </span>
         para detalhes o seu pedido.
       </p>
+      <Widget />
     </>
   )
 }
