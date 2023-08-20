@@ -20,9 +20,17 @@ const orders: Order[] = [
     id: 1,
     orderNumber: '1234',
     date: '01.06.2023',
-    value: '299.9',
+    value: '299,90',
     trackingLink: 'https://example.com/tracking',
     status: 'Pendente',
+  },
+  {
+    id: 2,
+    orderNumber: '1234',
+    date: '01.06.2023',
+    value: '100,00',
+    trackingLink: 'https://example.com/tracking',
+    status: 'Entregue',
   },
 ]
 
@@ -37,14 +45,14 @@ const Dashboard: React.FC = () => {
   }, [isLoaded, isSignedIn, router])
 
   return (
-    <section className="grid min-h-screen place-items-center px-6 py-24 sm:py-32 lg:px-8">
+    <section className="grid min-h-screen place-items-center py-24 sm:py-32 lg:px-8">
       <div>
         <main className="mx-auto items-center px-4 pb-24 pt-4 sm:px-6 lg:max-w-7xl lg:px-8">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Detalhes do pedido
           </h1>
 
-          <div className="flex flex-col">
+          <div className="flex w-80 flex-col">
             <h2 id="orders-heading" className="sr-only">
               Verifique o status de pedidos recentes e antigos e descubra mais
               produtos

@@ -14,11 +14,11 @@ interface OrderListProps {
 
 const OrderList: React.FC<OrderListProps> = ({ orders }) => {
   return (
-    <div className="overflow-x-auto">
-      <table className="w-full text-left text-sm text-gray-500 dark:text-gray-400">
+    <div className="overflow-x-auto ">
+      <table className="text-left text-sm text-gray-500 dark:text-gray-400">
         <thead className="bg-gray-200 text-xs text-gray-700 dark:bg-gray-700 dark:text-gray-400">
           <tr>
-            <th className="px-3 py-2 sm:px-6">N° Pedido</th>
+            <th className="px-3 py-2 sm:px-6">Pedido</th>
             <th className="px-3 py-2 sm:px-6">Data</th>
             <th className="px-3 py-2 sm:px-6">Valor</th>
             <th className="px-3 py-2 sm:px-6">Rastreamento</th>
@@ -45,7 +45,15 @@ const OrderList: React.FC<OrderListProps> = ({ orders }) => {
                   Link
                 </a>
               </td>
-              <td className="whitespace-nowrap px-3 py-2 text-yellow-400 sm:px-6">
+              <td
+                className={`whitespace-nowrap px-3 py-2 sm:px-6 ${
+                  order.status === 'Pendente'
+                    ? 'text-yellow-400'
+                    : order.status === 'Entregue'
+                    ? 'text-green-400'
+                    : ''
+                }`}
+              >
                 {order.status}
               </td>
             </tr>
