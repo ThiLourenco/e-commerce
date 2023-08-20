@@ -93,7 +93,7 @@ export const inventory: InventoryProduct[] = [
     images: [
       'https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/woolblend-suit-belt-1.jpg',
     ],
-    sizes: ['p', 'm', 'g', 'gg'],
+    sizes: ['p', 'm', 'g', 'gg', 'xg'],
     categories: ['cintos'],
     colors: ['preto'],
     currency: 'BRL',
@@ -130,7 +130,7 @@ export const inventory: InventoryProduct[] = [
     images: [
       'https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/leather-gloves-1.jpg',
     ],
-    sizes: ['p', 'm', 'g', 'gg'],
+    sizes: ['p', 'm', 'g', 'gg', 'xg'],
     categories: ['luvas'],
     colors: ['marrom'],
     currency: 'BRL',
