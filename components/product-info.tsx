@@ -82,7 +82,7 @@ export function ProductInfo({ product }: Props) {
         ))}
         <div className="mt-4">
           <span>
-            <InformationProduct />
+            <InformationProduct product={product} />
           </span>
         </div>
       </div>

@@ -25,6 +25,8 @@ export default async function Page({ params }: Props) {
       description,
       sizes,
       categories,
+      composition,
+      additionalInformation,
       colors,
       "slug": slug.current
   }`,

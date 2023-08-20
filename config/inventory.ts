@@ -97,8 +97,8 @@ export const inventory: InventoryProduct[] = [
     categories: ['cintos'],
     colors: ['preto'],
     currency: 'BRL',
-    composition: 'Textura trançada de couro velho',
-    additionalInformation: 'Design ajustável.',
+    composition: `Textura trançada de couro velho`,
+    additionalInformation: `Design ajustável.`,
   },
   {
     id: 'b5980fb9-142b-4e0b-9683-daac07827e0a',
@@ -135,7 +135,7 @@ export const inventory: InventoryProduct[] = [
     colors: ['marrom'],
     currency: 'BRL',
     composition: '100% Couro',
-    additionalInformation: 'xpto',
+    additionalInformation: 'Lavar à mão',
   },
   {
     id: '83ea928a-d834-4c6d-a588-4c93ec2de3c0',
@@ -152,8 +152,10 @@ export const inventory: InventoryProduct[] = [
     categories: ['luvas'],
     colors: ['preto'],
     currency: 'BRL',
-    composition: '100% Couro',
-    additionalInformation: 'xpto',
+    composition:
+      'Tecido principal: 100% - Poliéster. Forração: 100% - Poliéster. Acolchoamento: 100% - Poliéster. Palmas das Mãos: 100% - Poliéster. Cuff: 3% - Elastano97% - Poliéster. Revestimento: 100% - Poliuretano.',
+    additionalInformation:
+      'Estas luvas de ski integram uma membrana impermeável que consiste numa película polimérica muito fina, colocada entre o forro e a parte da luva que está em contato com o exterior. Esta membrana cria uma barreira à água e impermeabiliza o produto. Em complemento, os materiais exteriores do produto são submetidos a um tratamento de resistência à água que limita a absorção de água.Só as luvas de borracha são estanques. A estanquidade de uma luva com membrana em condições de humidade é limitada.',
   },
   {
     id: 'c5ef468d-d49e-4aa5-be5b-41f34af40b19',
@@ -190,7 +192,7 @@ export const inventory: InventoryProduct[] = [
     colors: ['preto'],
     currency: 'BRL',
     composition:
-      ' Material da armação: Polipropileno - Material da Lente: Acrílico',
+      'Material da armação: Polipropileno - Material da Lente: Acrílico',
     additionalInformation:
       'Comprimento da Haste: 13,8cm - Altura da Lente: 4,8cm - Largura Total: 13,7cm - Largura da Lente: 5,5cm Vantagens das lentes polarizadas e proteção UV400',
   },
