@@ -28,11 +28,15 @@ export function SiteHeader() {
     const searchQuery = formData.get('search')
     router.replace(`/products/?search=${searchQuery}`)
   }
+
+  const pathsToExclude = ['/', '/about', '/terms', '/policy', '/faq']
+  const shouldRenderForm = !pathsToExclude.includes(pathname)
+
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between space-x-4 px-6 sm:space-x-0">
         <MainNav />
-        {pathname !== '/' && (
+        {shouldRenderForm && (
           <form
             onChange={onChange}
             className="hidden items-center lg:inline-flex"

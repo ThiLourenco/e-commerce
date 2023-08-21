@@ -3,11 +3,10 @@ export const siteConfig = {
   description: 'Roupas, sapatos, bolsas e acessórios confira os destaques.',
   footer: [
     { name: 'Home', href: '/' },
-    { name: 'Sobre', href: '#' },
-    { name: 'Termos e Condições', href: '#' },
-    { name: 'Política de Envio e Devolução', href: '#' },
-    { name: 'Política de Privacidade', href: '#' },
-    { name: 'FAQ', href: '#' },
+    { name: 'Sobre', href: '/about' },
+    { name: 'Termos e Condições', href: '/terms' },
+    { name: 'Políticas de Envio, Devolução e Privacidade', href: '/policy' },
+    { name: 'FAQ', href: '/faq' },
   ],
 }
 export type SiteConfig = typeof siteConfig
