@@ -7,13 +7,13 @@ export default async function Page() {
   return (
     <div>
       <div className="mb-10 px-4 pt-20 text-center">
-        <h1 className="text-5xl font-extrabold tracking-normal">
+        <h1 className="text-5xl font-extrabold -tracking-tight">
           {siteConfig.name}
         </h1>
-        <h2 className="mx-auto mt-4 max-w-3xl text-2xl">
+        <h2 className="mx-auto mt-4 max-w-3xl text-2xl -tracking-tight">
           Seu estilo em um único lugar
         </h2>
-        <h3 className="mx-auto mt-4 max-w-3xl text-2xl">
+        <h3 className="mx-auto mt-4 max-w-3xl text-2xl -tracking-tight">
           <Link className="hover:text-cyan-600" href="/products">
             Consulte <span className="text-cyan-600">aqui</span> nossos produtos
           </Link>

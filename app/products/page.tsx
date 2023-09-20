@@ -52,10 +52,10 @@ export default async function Page({ searchParams }: Props) {
   return (
     <div>
       <div className="mb-10 px-4 pt-20 text-center">
-        <h1 className="text-5xl font-extrabold tracking-normal">
+        <h1 className="text-5xl font-extrabold -tracking-tight">
           {siteConfig.name}
         </h1>
-        <h2 className="mx-auto mt-4 max-w-3xl text-2xl">
+        <h2 className="mx-auto mt-4 max-w-3xl text-2xl -tracking-tight">
           {siteConfig.description}
         </h2>
       </div>

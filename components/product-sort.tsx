@@ -48,7 +48,7 @@ export function ProductSort() {
           <SheetHeader>
             <SheetTitle>Filtros</SheetTitle>
             <SheetDescription>
-              Restrinja sua pesquisa de produtos usando as opções abaixo.
+              Limite sua pesquisa de produtos usando as opções abaixo.
             </SheetDescription>
           </SheetHeader>
           <ProductFilters />
