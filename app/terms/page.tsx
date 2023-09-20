@@ -2,7 +2,7 @@ export default async function Page() {
   return (
     <main className="grid place-items-center px-6 xs:py-24 sm:py-32 lg:px-8">
       <h1 className="text-4xl font-extrabold -tracking-tight">
-        Termos e Condições
+        Termos e condições
       </h1>
       <div className="mx-auto max-w-6xl justify-normal px-4 pt-20 text-justify">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent

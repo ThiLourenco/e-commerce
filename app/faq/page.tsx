@@ -9,7 +9,7 @@ export default async function Page() {
   return (
     <main className="flex-1 px-6 xs:py-24 sm:py-32 lg:px-8 ">
       <h1 className="mx-auto max-w-6xl text-center text-4xl font-extrabold -tracking-tight">
-        Perguntas Mais Frequentes
+        Perguntas frequentes
       </h1>
       <div className="mx-auto max-w-6xl px-4 pt-20 text-justify">
         <Accordion type="single" collapsible>
