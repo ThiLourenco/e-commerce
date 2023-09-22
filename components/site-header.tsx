@@ -65,14 +65,16 @@ export function SiteHeader() {
             </Button>
           </SignedIn>
 
-          <SignedOut>
-            <SignInButton mode="redirect">
-              <button className=" flex gap-2 p-2 ">
-                Meus Pedidos
-                <LogInIcon className="h-5 w-5 xs:invisible sm:visible" />
-              </button>
-            </SignInButton>
-          </SignedOut>
+          {pathname !== '/' && (
+            <SignedOut>
+              <SignInButton mode="redirect">
+                <button className=" flex gap-2 p-2 ">
+                  Meus Pedidos
+                  <LogInIcon className="h-5 w-5 xs:invisible sm:visible" />
+                </button>
+              </SignInButton>
+            </SignedOut>
+          )}
 
           <ThemeToggle />
           {pathname !== '/' && (
