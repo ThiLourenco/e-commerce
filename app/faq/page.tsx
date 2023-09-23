@@ -8,11 +8,11 @@ import {
 export default async function Page() {
   return (
     <main className="flex-1 px-6 xs:py-24 sm:py-32 lg:px-8 ">
-      <h1 className="mx-auto max-w-6xl text-center text-4xl font-extrabold -tracking-tight">
+      <h2 className="mx-auto max-w-2xl text-center text-2xl font-extrabold -tracking-tight">
         Perguntas frequentes
-      </h1>
-      <div className="mx-auto max-w-6xl px-4 pt-20 text-justify">
-        <Accordion type="single" collapsible>
+      </h2>
+      <div className="mx-auto max-w-2xl px-4 pt-20 text-justify">
+        <Accordion className="mt-4 w-full" type="single" collapsible>
           <AccordionItem value="item-1">
             <AccordionTrigger value="item-1">Pergunta 1</AccordionTrigger>
             <AccordionContent>
