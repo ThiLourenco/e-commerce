@@ -196,4 +196,123 @@ export const inventory: InventoryProduct[] = [
     additionalInformation:
       'Comprimento da Haste: 13,8cm - Altura da Lente: 4,8cm - Largura Total: 13,7cm - Largura da Lente: 5,5cm Vantagens das lentes polarizadas e proteção UV400',
   },
+  {
+    id: '7433650a-99da-4012-8287-a22860afc4b0',
+    sku: 'camisa_1_preto',
+    name: 'Camisa Lisa Tubular',
+    description: `Camiseta masculina manga curta relaxed, uma opção moderna e confortável para o seu guarda-roupa. Desenvolvida em tecido de algodão lixado e amaciado, possui características únicas, como ótima transpiração, toque e leveza.`,
+    price: 15090,
+    image:
+      'https://cdn.sanity.io/images/d2tfklso/production/fea423637e177f2e7e5b1d49ddf650fe3d4f5b2f-680x850.jpg',
+    images: [
+      'https://cdn.sanity.io/images/d2tfklso/production/fea423637e177f2e7e5b1d49ddf650fe3d4f5b2f-680x850.jpg',
+    ],
+    sizes: ['gg'],
+    categories: ['camisas'],
+    colors: ['preto'],
+    currency: 'BRL',
+    composition: 'Algodão',
+    additionalInformation:
+      'Conta com modelagem relaxed que oferece um caimento mais solto, proporcionando conforto e liberdade de movimento, além de ser uma escolha atual para o seu estilo.',
+  },
+  {
+    id: '184d37b1-fbec-41c6-a6bf-125593dacd41',
+    sku: 'camisa_1_preto',
+    name: 'Camisa Preta Street',
+    description: `Uma proposta descontraída com caimento estruturado que incorpora a estética urbana. Seu ajuste é intencionalmente grande, com mangas mais compridas e os benefícios essenciais Insider: maciez, propriedade termorreguladora, ação anti odor e não desbota. É um item para ser usado como masculino ou feminino, ultra versátil para diversas composições conforme a sua criatividade. `,
+    price: 19900,
+    image:
+      'https://cdn.sanity.io/images/d2tfklso/production/2d4c615e3b754c79edef7b39db5d701b89fd483d-680x850.jpg',
+    images: [
+      'https://cdn.sanity.io/images/d2tfklso/production/92184a08c716f94e2ec31e0daf53302f539833f0-680x850.jpg',
+    ],
+    sizes: ['g', 'gg'],
+    categories: ['camisas'],
+    colors: ['preto'],
+    currency: 'BRL',
+    composition: '81% TENCEL™ Lyocell, 15% poliamida e 4% elastano',
+    additionalInformation:
+      'É um item para ser usado como masculino ou feminino, ultra versátil para diversas composições conforme a sua criatividade.',
+  },
+  {
+    id: 'd9e0194c-62ce-4c82-8e67-9efe392960b8',
+    sku: 'gorro-lenhador-hoshwear-preto',
+    name: 'Gorro Lenhador Hoshwear Preto',
+    description: `Uma proposta descontraída com caimento estruturado que incorpora a estética urbana. Seu ajuste é intencionalmente grande, com mangas mais compridas e os benefícios essenciais Insider: maciez, propriedade termorreguladora, ação anti odor e não desbota. É um item para ser usado como masculino ou feminino, ultra versátil para diversas composições conforme a sua criatividade. `,
+    price: 8990,
+    image:
+      'https://cdn.sanity.io/images/d2tfklso/production/83d9932b5b3725b03a9d39a574231b776508634e-680x850.jpg',
+    images: [
+      'https://cdn.sanity.io/images/d2tfklso/production/83d9932b5b3725b03a9d39a574231b776508634e-680x850.jpg',
+      'https://cdn.sanity.io/images/d2tfklso/production/bad94890f08054de77c5cd581135ed6fce2f1eb3-680x850.jpg',
+    ],
+    sizes: ['unico'],
+    categories: ['gorros'],
+    colors: ['preto'],
+    currency: 'BRL',
+    composition: 'Lã',
+    additionalInformation: '- Testes e solidez obedecendo as normas ABNT.',
+  },
+  {
+    id: '288fea00-5f24-4bc8-9170-167919772b19',
+    sku: 'bone-palace-ripstop-preto',
+    name: 'Boné Palace Ripstop Preto',
+    description: `A Palace Skateboards é uma marca de skate e roupas com sede em Londres, fundada em 2009. A marca foi fundada por Levent Tanju e sua equipe de skate, o Palace Wayward Boys Choir. Palace se concentra em roupas de skate com influências pesadas dos anos 1990 e da cultura pop ao lado de anúncios de roupas no estilo VHS.`,
+    price: 80090,
+    image:
+      'https://cdn.sanity.io/images/d2tfklso/production/2b4116e5c074d173a475149d4ad8bebe840e0aac-680x850.jpg',
+    images: [
+      'https://cdn.sanity.io/images/d2tfklso/production/2b4116e5c074d173a475149d4ad8bebe840e0aac-680x850.jpg',
+      'https://cdn.sanity.io/images/d2tfklso/production/fcf623fac08fbe7d891b9f1a6f9473c261298d98-680x850.jpg',
+    ],
+    sizes: ['unico'],
+    categories: ['bones'],
+    colors: ['preto'],
+    currency: 'BRL',
+    composition: '67% Poliéster, 33% Algodão',
+    additionalInformation: `
+    Gênero: Unissex 
+    Indicado Para: Casual`,
+  },
+  {
+    id: 'be325fd2-166f-4a47-86cc-d2dd221d0bde',
+    sku: 'bolsa-transversal-chanel-2-55-em-couro',
+    name: 'Bolsa transversal Chanel 2.55 em couro',
+    description: `Bolsa Chanel Quilted Perforated Leather Single Flap Jumbo 2006-2008, confeccionada em couro e ferragens prata. Modelo possui alça de ombro ou transversal, um bolso externo, compartimento único com fechamento por dispositivo de encaixe e aba, dois bolsos internos sendo um deles fechamento por zíper. Não acompanha dust bag.`,
+    price: 2923150,
+    image:
+      'https://cdn.sanity.io/images/d2tfklso/production/b4ea362838dae50ed618f9b25209f47fe186c6e1-680x850.jpg',
+    images: [
+      'https://cdn.sanity.io/images/d2tfklso/production/b4ea362838dae50ed618f9b25209f47fe186c6e1-680x850.jpg',
+      'https://cdn.sanity.io/images/d2tfklso/production/7500dee61d05a062fca4599084c025566a83b6d8-680x850.jpg',
+    ],
+    sizes: ['unico'],
+    categories: ['bolsas'],
+    colors: ['preto'],
+    currency: 'BRL',
+    composition: 'Couro',
+    additionalInformation: `Largura: 30cm, Altura: 18cm, Profundidade: 9cm, Altura da alça: 64cm.`,
+  },
+  {
+    id: '1e7c54f0-d232-4e84-abc9-b4410db129fe',
+    sku: 'casaco-hoodie',
+    name: 'Casaco Canguru K Hoodie',
+    description: `O Casaco Canguru K Hoodie foi confeccionado em moletom premium, sua modelagem leva um detalhe em recorte lateral trazendo conforto e liberdade de movimento, 
+
+    Possui dedal e um bolso escondido.`,
+    price: 20000,
+    image:
+      'https://cdn.sanity.io/images/d2tfklso/production/6889abdb358480529e52cef0a4cf8521dde66c7b-680x850.jpg',
+    images: [
+      'https://cdn.sanity.io/images/d2tfklso/production/6889abdb358480529e52cef0a4cf8521dde66c7b-680x850.jpg',
+      'https://cdn.sanity.io/images/d2tfklso/production/5092e1ae86670e0b7011128624dd6f5a2b8efe0d-680x850.jpg',
+    ],
+    sizes: ['m', 'g', 'gg'],
+    categories: ['casacos'],
+    colors: ['preto', 'branco'],
+    currency: 'BRL',
+    composition: 'Moletom: 88% Algodão 12% Poliester',
+    additionalInformation: `As medidas deste produto podem variar em até 2 cm do valor informado
+    `,
+  },
 ]
