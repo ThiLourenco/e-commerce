@@ -18,9 +18,12 @@ const filters = [
       { value: 'bolsas', label: 'Bolsas' },
       { value: 'cintos', label: 'Cintos' },
       { value: 'luvas', label: 'Luvas' },
-      { value: 'lencos', label: 'Lenços' },
       { value: 'carteiras', label: 'Carteiras' },
       { value: 'oculos', label: 'Óculos' },
+      { value: 'camisas', label: 'Camisas' },
+      { value: 'gorros', label: 'Gorros' },
+      { value: 'bones', label: 'Bonés' },
+      { value: 'casacos', label: 'Casacos' },
     ],
   },
   {
@@ -44,6 +47,7 @@ const filters = [
       { value: 'marrom', label: 'Marrom' },
       { value: 'verde', label: 'Verde' },
       { value: 'amarelo', label: 'Amarelo' },
+      { value: 'branco', label: 'Branco' },
     ],
   },
 ]

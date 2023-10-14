@@ -1,9 +1,7 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import React from 'react'
 import OrderItem from '@/components/order'
-import { useUser } from '@clerk/nextjs'
-import { useRouter } from 'next/navigation'
 import { Widget } from '@/components/Widget'
 
 interface Order {
@@ -32,33 +30,37 @@ const orders: Order[] = [
     trackingLink: '',
     status: 'Entregue',
   },
+  {
+    id: 3,
+    orderNumber: '1235',
+    date: '01.06.2023',
+    value: '2000,00',
+    trackingLink: '',
+    status: 'Aguardando',
+  },
 ]
 
-const Dashboard: React.FC = () => {
-  const { isLoaded, isSignedIn } = useUser()
-  const router = useRouter()
-
-  useEffect(() => {
-    if (isLoaded && !isSignedIn) {
-      router.push('/sign-in?redirectUrl=/dashboard')
-    }
-  }, [isLoaded, isSignedIn, router])
-
+const Page: React.FC = () => {
   return (
-    <section className=" mx-auto grid max-h-screen max-w-7xl flex-1 place-items-center px-6 py-24 sm:py-32 lg:px-8">
-      <div>
-        <main className="mx-auto items-center px-4 pb-24 pt-4 sm:px-6 lg:max-w-7xl lg:px-8">
-          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Detalhes do pedido
-          </h1>
-
-          <div className="mt-10 flex max-h-96 flex-col xs:w-80 sm:w-9/12 lg:w-full">
-            <h2 id="orders-heading" className="sr-only">
-              Verifique o status de pedidos recentes e antigos e descubra mais
-              produtos
-            </h2>
-            <OrderItem orders={orders} />
+    <section className="">
+      <header className="">
+        <nav className="px-24 py-6 text-2xl">
+          <div className="flex w-full items-center justify-center">
+            <p className="text-grey font-bold">Meus Pedidos</p>
           </div>
+        </nav>
+      </header>
+      <div>
+        <main className="flex w-full items-center justify-center px-24 py-6 text-2xl">
+          <section className="px-24 py-10 lg:w-5/6 xl:w-5/6 2xl:w-5/6">
+            <div className="mt-10 max-h-96 flex-col xs:w-80 sm:w-9/12 lg:w-auto">
+              <h2 id="orders-heading" className="sr-only">
+                Verifique o status de pedidos recentes e antigos e descubra mais
+                produtos
+              </h2>
+              <OrderItem orders={orders} />
+            </div>
+          </section>
         </main>
       </div>
       <Widget />
@@ -66,4 +68,4 @@ const Dashboard: React.FC = () => {
   )
 }
 
-export default Dashboard
+export default Page
