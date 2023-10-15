@@ -8,11 +8,13 @@ const __dirname = path.dirname(__filename)
 
 const nextConfig = {
   reactStrictMode: true,
+  swcMinify: true,
   images: {
     domains: ['cdn.sanity.io'],
   },
   webpack: (config) => {
     config.resolve.alias = {
+      fs: false,
       ...config.resolve.alias,
       '@': path.resolve(__dirname, './'),
     }

@@ -124,7 +124,7 @@ dependencies:
     version: 1.13.2
   tailwindcss-animate:
     specifier: 1.0.6
-    version: 1.0.6(tailwindcss@3.3.2)
+    version: 1.0.6(tailwindcss@3.3.3)
   use-shopping-cart:
     specifier: 3.1.8
     version: 3.1.8(react@18.2.0)(redux@4.2.1)
@@ -152,8 +152,8 @@ devDependencies:
     specifier: 5.60.0
     version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
   autoprefixer:
-    specifier: 10.4.14
-    version: 10.4.14(postcss@8.4.24)
+    specifier: 10.4.16
+    version: 10.4.16(postcss@8.4.31)
   eslint:
     specifier: 8.43.0
     version: 8.43.0
@@ -168,10 +168,10 @@ devDependencies:
     version: 7.33.2(eslint@8.43.0)
   eslint-plugin-tailwindcss:
     specifier: 3.12.1
-    version: 3.12.1(tailwindcss@3.3.2)
+    version: 3.12.1(tailwindcss@3.3.3)
   postcss:
-    specifier: 8.4.24
-    version: 8.4.24
+    specifier: 8.4.31
+    version: 8.4.31
   prettier:
     specifier: 2.8.8
     version: 2.8.8
@@ -182,8 +182,8 @@ devDependencies:
     specifier: ^5.4.2
     version: 5.4.2
   tailwindcss:
-    specifier: 3.3.2
-    version: 3.3.2
+    specifier: 3.3.3
+    version: 3.3.3
   typescript:
     specifier: 5.1.3
     version: 5.1.3
@@ -4759,8 +4759,8 @@ packages:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
     dev: false
 
-  /autoprefixer@10.4.14(postcss@8.4.24):
-    resolution: {integrity: sha512-FQzyfOsTlwVzjHxKEqRIAdJx9niO6VCBCoEwax/VLSoQF29ggECcPuBqUMZ+u8jCZOPSy8b8/8KnuFbp0SaFZQ==}
+  /autoprefixer@10.4.16(postcss@8.4.31):
+    resolution: {integrity: sha512-7vd3UC6xKp0HLfua5IjZlcXvGAGy7cBAXTg2lyQ/8WpNhd6SiZ8Be+xm3FyBSYJx5GKcpRCzBh7RH4/0dnY+uQ==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
@@ -4771,7 +4771,7 @@ packages:
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.0
-      postcss: 8.4.24
+      postcss: 8.4.31
       postcss-value-parser: 4.2.0
     dev: true
 
@@ -6091,7 +6091,7 @@ packages:
       string.prototype.matchall: 4.0.10
     dev: true
 
-  /eslint-plugin-tailwindcss@3.12.1(tailwindcss@3.3.2):
+  /eslint-plugin-tailwindcss@3.12.1(tailwindcss@3.3.3):
     resolution: {integrity: sha512-LyIRV0rx6prTpJZsSCXSNJ34Yry3Nj9OJwvzh1xTsiG6+UCnAPW1Bx41s7vZzUDKMlwFgpUN9Me+NK12T4DHYg==}
     engines: {node: '>=12.13.0'}
     peerDependencies:
@@ -6099,7 +6099,7 @@ packages:
     dependencies:
       fast-glob: 3.3.1
       postcss: 8.4.24
-      tailwindcss: 3.3.2
+      tailwindcss: 3.3.3
     dev: true
 
   /eslint-scope@5.1.1:
@@ -8306,7 +8306,6 @@ packages:
       nanoid: 3.3.6
       picocolors: 1.0.0
       source-map-js: 1.0.2
-    dev: false
 
   /preact-render-to-string@5.2.3(preact@10.11.3):
     resolution: {integrity: sha512-aPDxUn5o3GhWdtJtW0svRC2SS/l8D9MAgo2+AWml+BhDImb27ALf04Q2d+AHqUUOc6RdSXFIBVa2gxzgMKgtZA==}
@@ -9720,16 +9719,16 @@ packages:
     resolution: {integrity: sha512-R2/nULkdg1VR/EL4RXg4dEohdoxNUJGLMnWIQnPKL+O9Twu7Cn3Rxi4dlXkDzZrEGtR+G+psSXFouWlpTyLhCQ==}
     dev: false
 
-  /tailwindcss-animate@1.0.6(tailwindcss@3.3.2):
+  /tailwindcss-animate@1.0.6(tailwindcss@3.3.3):
     resolution: {integrity: sha512-4WigSGMvbl3gCCact62ZvOngA+PRqhAn7si3TQ3/ZuPuQZcIEtVap+ENSXbzWhpojKB8CpvnIsrwBu8/RnHtuw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
     dependencies:
-      tailwindcss: 3.3.2
+      tailwindcss: 3.3.3
     dev: false
 
-  /tailwindcss@3.3.2:
-    resolution: {integrity: sha512-9jPkMiIBXvPc2KywkraqsUfbfj+dHDb+JPWtSJa9MLFdrPyazI7q6WX2sUrm7R9eVR7qqv3Pas7EvQFzxKnI6w==}
+  /tailwindcss@3.3.3:
+    resolution: {integrity: sha512-A0KgSkef7eE4Mf+nKJ83i75TMyq8HqY3qmFIJSWy8bNt0v1lG7jUcpGpoTFxAwYcWOphcTBLPPJg+bDfhDf52w==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -9753,7 +9752,6 @@ packages:
       postcss-load-config: 4.0.1(postcss@8.4.24)
       postcss-nested: 6.0.1(postcss@8.4.24)
       postcss-selector-parser: 6.0.13
-      postcss-value-parser: 4.2.0
       resolve: 1.22.8
       sucrase: 3.34.0
     transitivePeerDependencies:
