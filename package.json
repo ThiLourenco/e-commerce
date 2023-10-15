@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npx prisma generate && prisma migrate deploy && next build",
-    "postinstall": "npx prisma generate",
+    "build": "next build",
+    "vercel-build": "npx prisma generate && prisma migrate deploy && next build",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "preview": "npx prisma generate && prisma migrate deploy && next build && next start",
+    "preview": "next build && next start",
     "typecheck": "tsc --noEmit"
   },
   "prisma": {
