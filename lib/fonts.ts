@@ -1,5 +1,5 @@
 // eslint-disable-next-line camelcase
-import { Roboto_Mono, Lato } from 'next/font/google'
+import { Roboto_Mono, Lato } from 'next/font/google/'
 
 export const fontSans = Lato({
   subsets: ['latin-ext'],
