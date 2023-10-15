@@ -9,9 +9,7 @@ import { Providers } from '@/components/providers'
 import { SiteBlob } from '@/components/site-blob'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
-import { ClerkProvider } from '@clerk/nextjs'
-import { ptBR } from '@clerk/localizations'
-import { neobrutalism } from '@clerk/themes'
+import { Session } from 'next-auth'
 
 export const metadata: Metadata = {
   title: siteConfig.name,
@@ -23,9 +21,10 @@ export const metadata: Metadata = {
 
 interface RootLayoutProps {
   children: ReactNode
+  session: Session
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({ children, session }: RootLayoutProps) {
   return (
     <>
       <html lang="pt-BR" suppressHydrationWarning>
@@ -36,19 +35,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable,
           )}
         >
-          <ClerkProvider
-            localization={ptBR}
-            appearance={{ baseTheme: neobrutalism }}
-          >
-            <Providers>
-              <div className="relative flex min-h-screen flex-col">
-                <SiteHeader />
-                <SiteBlob />
-                <div className="flex-1">{children}</div>
-                <SiteFooter />
-              </div>
-            </Providers>
-          </ClerkProvider>
+          <Providers session={session}>
+            <div className="relative flex min-h-screen flex-col">
+              <SiteHeader />
+              <SiteBlob />
+              <div className="flex-1">{children}</div>
+              <SiteFooter />
+            </div>
+          </Providers>
         </body>
       </html>
     </>

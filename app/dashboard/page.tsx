@@ -1,8 +1,10 @@
 'use client'
 
-import React from 'react'
 import OrderItem from '@/components/order'
 import { Widget } from '@/components/Widget'
+
+import { useSession } from 'next-auth/react'
+import { useRouter } from 'next/navigation'
 
 interface Order {
   id: number
@@ -40,7 +42,16 @@ const orders: Order[] = [
   },
 ]
 
-const Page: React.FC = () => {
+export default function Page() {
+  const { data: session } = useSession()
+  const router = useRouter()
+
+  // verify if user is authenticated
+  if (!session) {
+    // redirect to login page
+    router.push('/login')
+    return null
+  }
   return (
     <section className="">
       <header className="">
@@ -67,5 +78,3 @@ const Page: React.FC = () => {
     </section>
   )
 }
-
-export default Page
