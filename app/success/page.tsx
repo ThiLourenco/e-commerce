@@ -13,7 +13,7 @@ export default async function Page({ searchParams }: Props) {
   const sessionId = searchParams?.session_id ?? ''
   const checkoutSession = await stripe.checkout.sessions.retrieve(sessionId)
   const customerDetails = checkoutSession?.customer_details
-  console.log(customerDetails, 'customer details')
+  // console.log(customerDetails, 'customer details')
   return (
     <main className="grid place-items-center px-6 xs:py-24 sm:py-32 lg:px-8">
       <div className="text-center">
