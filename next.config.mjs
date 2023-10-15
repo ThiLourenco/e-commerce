@@ -14,7 +14,6 @@ const nextConfig = {
   },
   webpack: (config) => {
     config.resolve.alias = {
-      fs: false,
       ...config.resolve.alias,
       '@': path.resolve(__dirname, './'),
     }
