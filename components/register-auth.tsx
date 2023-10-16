@@ -14,7 +14,7 @@ import { Label } from '../components/ui/label'
 import { Icons } from './ui/icons'
 
 const RegisterFormSchema = z.object({
-  name: z.string(),
+  name: z.string().min(3, 'Informe seu nome completo.'),
   email: z.string().email('Digite um e-mail válido: johndoe@example.com.'),
   password: z.string().min(6, 'A senha deverá conter no mínimo 6 caracteres.'),
 })
@@ -106,7 +106,7 @@ export const UserRegisterForm = () => {
               htmlFor="name"
               className="mb-1 text-xs tracking-wide dark:text-gray-300 sm:text-sm"
             >
-              Nome:
+              Nome
             </Label>
             <Input
               {...register('name')}
@@ -128,7 +128,7 @@ export const UserRegisterForm = () => {
               htmlFor="email"
               className="mb-1 text-xs tracking-wide dark:text-gray-300 sm:text-sm"
             >
-              E-mail:
+              E-mail
             </Label>
             <Input
               {...register('email')}
@@ -140,7 +140,7 @@ export const UserRegisterForm = () => {
               autoComplete="email"
               autoCorrect="off"
               autoCapitalize="none"
-              placeholder="Digite seu email"
+              placeholder="Digite seu e-mail"
             />
             <span className="text-sm italic text-red-500 dark:text-red-500">
               {errors.email?.message}
@@ -152,7 +152,7 @@ export const UserRegisterForm = () => {
               htmlFor="password"
               className="mb-1 text-xs tracking-wide dark:text-gray-300 sm:text-sm"
             >
-              Senha:
+              Senha
             </Label>
             <Input
               {...register('password')}
@@ -166,7 +166,7 @@ export const UserRegisterForm = () => {
             />
             <button
               type="button"
-              className="absolute inset-y-0 right-0 flex items-center px-4 py-10 text-gray-600"
+              className="absolute inset-y-0 right-0 flex items-center px-4 py-10 xs:py-10 text-gray-600"
               onClick={togglePasswordVisibility}
             >
               {' '}
@@ -238,8 +238,8 @@ export const UserRegisterForm = () => {
             type="submit"
             className="ease flex items-center justify-center rounded-md 
             border-2 border-green-700 bg-green-700 px-5 py-3 text-white
-            shadow-md transition hover:border-black enabled:hover:border-green-700 enabled:hover:bg-green-500 enabled:hover:text-white disabled:cursor-not-allowed disabled:opacity-75
-            dark:hover:border-black enabled:dark:border-green-700 enabled:dark:bg-green-700 enabled:dark:text-white enabled:dark:hover:bg-green-500
+            shadow-md transition hover:border-black enabled:hover:border-green-500 enabled:hover:bg-green-500 enabled:hover:text-white disabled:cursor-not-allowed disabled:opacity-75
+            dark:hover:border-black enabled:dark:hover:border-green-500 enabled:dark:border-green-700 enabled:dark:bg-green-700 enabled:dark:text-white enabled:dark:hover:bg-green-500
             enabled:dark:hover:text-white
             "
             disabled={isLoading}

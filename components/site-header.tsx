@@ -28,6 +28,7 @@ export function SiteHeader() {
     event.preventDefault()
     const formData = new FormData(event.currentTarget)
     const searchQuery = formData.get('search')
+    console.log(searchQuery)
     router.replace(`/products/?search=${searchQuery}`)
   }
 
