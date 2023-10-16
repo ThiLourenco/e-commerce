@@ -14,7 +14,7 @@ import { Label } from '../components/ui/label'
 import { Icons } from './ui/icons'
 
 const RegisterFormSchema = z.object({
-  name: z.string().min(3, 'Informe seu nome completo.'),
+  name: z.string().min(3, 'Digite seu nome completo.'),
   email: z.string().email('Digite um e-mail válido: johndoe@example.com.'),
   password: z.string().min(6, 'A senha deverá conter no mínimo 6 caracteres.'),
 })
