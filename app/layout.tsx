@@ -1,8 +1,8 @@
-import '@/styles/globals.css'
+import '../styles/globals.css'
 
 import { ReactNode } from 'react'
 import { Metadata } from 'next'
-import { siteConfig } from '@/config/site'
+import { siteConfig } from '../config/site'
 import { fontSans } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
 import { Providers } from '@/components/providers'

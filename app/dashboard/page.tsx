@@ -1,7 +1,7 @@
 'use client'
 
-import OrderItem from '@/components/order'
-import { Widget } from '@/components/Widget'
+import OrderItem from '../../components/order'
+import { Widget } from '../../components/Widget'
 
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
