@@ -12,6 +12,7 @@ import { Input } from '../components/ui/input'
 import { Label } from '../components/ui/label'
 import { Button } from '../components/ui/button'
 import Link from 'next/link'
+import { useToast } from './ui/use-toast'
 
 const LoginSchema = z.object({
   email: z.string().email('Digite um e-mail válido: johndoe@example.com.'),
@@ -23,6 +24,7 @@ type FormDataLogin = z.infer<typeof LoginSchema>
 export const UserLoginForm = () => {
   const router = useRouter()
   const [isPasswordVisible, setIsPasswordVisible] = useState(false)
+  const { toast } = useToast()
 
   const {
     register,
@@ -45,17 +47,26 @@ export const UserLoginForm = () => {
 
       if (response?.error) {
         // Em caso de erro, defina a mensagem de erro no campo relevante
-        if (response.error === 'InvalidCredentials') {
-          return (
-            errors.email &&
-            errors.password &&
-            setFormError('email', {
-              type: 'manual',
-              message: 'Login e/ou Senha inválido(s)',
-            })
-          )
+        if (
+          response.error === 'InvalidCredentials' &&
+          response.status === 401
+        ) {
+          setFormError('email', {
+            type: 'required',
+            message: 'E-mail e/ou Senha inválido(s).',
+          })
+
+          setFormError('password', {
+            type: 'manual',
+            message: 'E-mail e/ou Senha inválido(s).',
+          })
         }
       } else {
+        toast({
+          title: 'Seja bem vindo(a) !!',
+          description: 'Login realizado com sucesso.',
+          variant: 'default',
+        })
         router.push('/dashboard')
       }
     } catch (err) {

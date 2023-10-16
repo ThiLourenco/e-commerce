@@ -80,7 +80,7 @@ export const authOptions: NextAuthOptions = {
           credentials.password,
           user.hashedPassword,
         )
-        if (!matchPassword) throw new Error('Senha incorreta')
+        if (!matchPassword) throw new Error('InvalidCredentials')
 
         return user
       },
