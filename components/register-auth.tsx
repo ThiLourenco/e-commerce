@@ -52,7 +52,7 @@ export const UserRegisterForm = () => {
     }
 
     try {
-      const responseUserExists = fetch('api/verifyUser', {
+      const responseUserExists = await fetch('api/verifyUser', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -61,8 +61,11 @@ export const UserRegisterForm = () => {
       })
 
       // const user = await responseUserExists.json()
-
-      if (!responseUserExists) {
+      // console.log(responseUserExists)
+      if (
+        responseUserExists.status === 400 &&
+        responseUserExists.ok === false
+      ) {
         setFormError('email', {
           type: 'required',
           message: 'Falha no processo de registro, verifique as informações.',
@@ -250,28 +253,6 @@ export const UserRegisterForm = () => {
             )}
             Registrar
           </Button>
-          {/* <Button
-            className="ease flex items-center justify-center rounded-md 
-            border-2 border-green-700 bg-green-700 px-5 py-3 text-white
-            shadow-md transition hover:border-black enabled:hover:border-green-700 enabled:hover:bg-green-500 enabled:hover:text-white disabled:cursor-not-allowed disabled:opacity-75
-            dark:hover:border-black enabled:dark:border-green-700 enabled:dark:bg-green-700 enabled:dark:text-white enabled:dark:hover:bg-green-500
-            enabled:dark:hover:text-white
-            "
-            disabled={isLoading}
-          >
-            {isLoading && (
-              // <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
-              <span>spinner</span>
-            )}
-            Registrar
-          </Button> */}
-
-          {/* {error && (
-            <div className="text-md mt-2 w-fit rounded-md py-1 text-sm text-red-500">
-              {error}
-            </div>
-          )} */}
-
           <span className="m-2 text-right text-sm">
             Já possui uma conta?{' '}
             <Link href={'/login'} className="underline hover:text-gray-400">
