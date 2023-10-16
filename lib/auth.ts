@@ -5,7 +5,7 @@ import { PrismaAdapter } from '@auth/prisma-adapter'
 import CredentialProvider from 'next-auth/providers/credentials'
 import GoogleProvider from 'next-auth/providers/google'
 import bcrypt from 'bcryptjs'
-import prisma from '@/prisma/prisma'
+import prisma from '../prisma/prisma'
 
 export interface MySession extends Session {
   user: {

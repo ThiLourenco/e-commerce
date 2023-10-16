@@ -1,8 +1,8 @@
 import { getServerSession as originalGetServerSession } from 'next-auth'
 import { redirect } from 'next/navigation'
-import { authOptions } from '@/lib/auth'
+import { authOptions } from '../../../lib/auth'
 import { cookies, headers } from 'next/headers'
-import { UserLoginForm } from '@/components/login-auth'
+import { UserLoginForm } from '../../../components/login-auth'
 
 export default async function Page() {
   const req = {

@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Loader2 } from 'lucide-react'
 import { formatCurrencyString, useShoppingCart } from 'use-shopping-cart'
 
-import { Button } from '@/components/ui/button'
+import { Button } from '../components/ui/button'
 
 export function CartSummary() {
   const {

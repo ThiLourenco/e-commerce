@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 
-import { siteConfig } from '@/config/site'
+import { siteConfig } from '../config/site'
 import { usePathname } from 'next/navigation'
 
 export function SiteFooter() {
