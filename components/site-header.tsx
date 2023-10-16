@@ -7,10 +7,10 @@ import { Edit, LogInIcon, ShoppingBag } from 'lucide-react'
 import { useShoppingCart } from 'use-shopping-cart'
 import { signOut, useSession } from 'next-auth/react'
 
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { MainNav } from '@/components/main-nav'
-import { ThemeToggle } from '@/components/theme-toggle'
+import { Button } from '../components/ui/button'
+import { Input } from '../components/ui/input'
+import { MainNav } from '../components/main-nav'
+import { ThemeToggle } from '../components/theme-toggle'
 
 export function SiteHeader() {
   const { status, data: session } = useSession()

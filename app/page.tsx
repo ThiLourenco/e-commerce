@@ -1,6 +1,6 @@
-import { siteConfig } from '@/config/site'
+import { siteConfig } from '../config/site'
 
-import { ImageCarousel } from '@/components/ui/carousel'
+import { ImageCarousel } from '../components/ui/carousel'
 import Link from 'next/link'
 
 export default async function Page() {

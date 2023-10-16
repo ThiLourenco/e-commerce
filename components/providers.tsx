@@ -3,9 +3,9 @@
 import { ReactNode } from 'react'
 import { SessionProvider } from 'next-auth/react'
 import { CartProvider } from 'use-shopping-cart'
-import { Toaster } from '@/components/ui/toaster'
-import { TailwindIndicator } from '@/components/tailwind-indicator'
-import { ThemeProvider } from '@/components/theme-provider'
+import { Toaster } from '../components/ui/toaster'
+import { TailwindIndicator } from '../components/tailwind-indicator'
+import { ThemeProvider } from '../components/theme-provider'
 import { Session } from 'next-auth'
 
 interface Props {

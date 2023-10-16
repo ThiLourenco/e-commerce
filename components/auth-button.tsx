@@ -1,8 +1,8 @@
 'use client'
-import { cn } from '@/lib/utils'
+import { cn } from '../lib/utils'
 import { signOut, useSession } from 'next-auth/react'
 import Link from 'next/link'
-import { Button, buttonVariants } from '@/components/ui/button'
+import { Button, buttonVariants } from '../components/ui/button'
 
 export default function AuthButton({ page }: { page: string }) {
   const { status } = useSession()
