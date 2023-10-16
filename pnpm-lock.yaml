@@ -10,7 +10,7 @@ dependencies:
     version: 1.0.3(@prisma/client@5.4.2)
   '@hookform/resolvers':
     specifier: ^3.3.0
-    version: 3.3.0(react-hook-form@7.47.0)
+    version: 3.3.2(react-hook-form@7.47.0)
   '@mantine/carousel':
     specifier: ^6.0.14
     version: 6.0.21(@mantine/core@6.0.21)(@mantine/hooks@6.0.21)(embla-carousel-react@8.0.0-rc07)(react@18.2.0)
@@ -106,7 +106,7 @@ dependencies:
     version: 7.47.0(react@18.2.0)
   sanity:
     specifier: 3.12.2
-    version: 3.12.2(@types/node@20.3.1)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.0-rc.6)
+    version: 3.12.2(@types/node@18.18.5)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.0-rc.6)
   shadcn-ui:
     specifier: 0.2.2
     version: 0.2.2(typescript@5.1.3)
@@ -130,7 +130,7 @@ dependencies:
     version: 3.1.8(react@18.2.0)(redux@4.2.1)
   zod:
     specifier: ^3.21.4
-    version: 3.21.4
+    version: 3.22.4
 
 devDependencies:
   '@thilourenco/eslint-config':
@@ -140,8 +140,8 @@ devDependencies:
     specifier: ^2.4.4
     version: 2.4.4
   '@types/node':
-    specifier: 20.3.1
-    version: 20.3.1
+    specifier: ^18.18.2
+    version: 18.18.5
   '@types/react':
     specifier: 18.2.14
     version: 18.2.14
@@ -167,8 +167,8 @@ devDependencies:
     specifier: ^7.32.2
     version: 7.33.2(eslint@8.43.0)
   eslint-plugin-tailwindcss:
-    specifier: 3.12.1
-    version: 3.12.1(tailwindcss@3.3.3)
+    specifier: 3.13.0
+    version: 3.13.0(tailwindcss@3.3.3)
   postcss:
     specifier: 8.4.31
     version: 8.4.31
@@ -176,8 +176,8 @@ devDependencies:
     specifier: 2.8.8
     version: 2.8.8
   prettier-plugin-tailwindcss:
-    specifier: ^0.3.0
-    version: 0.3.0(prettier@2.8.8)
+    specifier: 0.5.6
+    version: 0.5.6(prettier@2.8.8)
   prisma:
     specifier: ^5.4.2
     version: 5.4.2
@@ -2319,8 +2319,8 @@ packages:
     resolution: {integrity: sha512-OfX7E2oUDYxtBvsuS4e/jSn4Q9Qb6DzgeYtsAdkPZ47znpoNsMgZw0+tVijiv3uGNR6dgNlty6r9rzIzHjtd/A==}
     dev: false
 
-  /@hookform/resolvers@3.3.0(react-hook-form@7.47.0):
-    resolution: {integrity: sha512-tgK3nWlfFLlqhqpXZmFMP3RN5E7mlbGfnM2h2ILVsW1TNGuFSod0ePW0grlIY2GAbL4pJdtmOT4HQSZsTwOiKg==}
+  /@hookform/resolvers@3.3.2(react-hook-form@7.47.0):
+    resolution: {integrity: sha512-Tw+GGPnBp+5DOsSg4ek3LCPgkBOuOgS5DsDV7qsWNH9LZc433kgsWICjlsh2J9p04H2K66hsXPPb9qn9ILdUtA==}
     peerDependencies:
       react-hook-form: ^7.0.0
     dependencies:
@@ -4110,7 +4110,7 @@ packages:
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 20.3.1
+      '@types/node': 18.18.5
     dev: false
 
   /@types/hast@2.3.6:
@@ -4146,8 +4146,8 @@ packages:
     resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==}
     dev: false
 
-  /@types/node@20.3.1:
-    resolution: {integrity: sha512-EhcH/wvidPy1WeML3TtYFGR83UzjxeWRen9V402T8aUGYsCHOmfoisV3ZSg03gAFIbLq8TnWOJ0f4cALtnSEUg==}
+  /@types/node@18.18.5:
+    resolution: {integrity: sha512-4slmbtwV59ZxitY4ixUZdy1uRLf9eSIvBWPQxNjhHYWEtn0FryfKpyS2cvADYXTayWdKEIsJengncrVvkI4I6A==}
 
   /@types/normalize-package-data@2.4.2:
     resolution: {integrity: sha512-lqa4UEhhv/2sjjIQgjX8B+RBjj47eo0mzGasklVJ78UKGQY1r0VpB9XHDaZZO9qzEFDdy4MrXLuEaSmPrPSe/A==}
@@ -4498,7 +4498,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.22.5(@babel/core@7.23.2)
       magic-string: 0.27.0
       react-refresh: 0.14.0
-      vite: 4.4.11(@types/node@20.3.1)
+      vite: 4.4.11(@types/node@18.18.5)
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -6091,14 +6091,14 @@ packages:
       string.prototype.matchall: 4.0.10
     dev: true
 
-  /eslint-plugin-tailwindcss@3.12.1(tailwindcss@3.3.3):
-    resolution: {integrity: sha512-LyIRV0rx6prTpJZsSCXSNJ34Yry3Nj9OJwvzh1xTsiG6+UCnAPW1Bx41s7vZzUDKMlwFgpUN9Me+NK12T4DHYg==}
+  /eslint-plugin-tailwindcss@3.13.0(tailwindcss@3.3.3):
+    resolution: {integrity: sha512-Fcep4KDRLWaK3KmkQbdyKHG0P4GdXFmXdDaweTIPcgOP60OOuWFbh1++dufRT28Q4zpKTKaHwTsXPJ4O/EjU2Q==}
     engines: {node: '>=12.13.0'}
     peerDependencies:
       tailwindcss: ^3.3.2
     dependencies:
       fast-glob: 3.3.1
-      postcss: 8.4.24
+      postcss: 8.4.31
       tailwindcss: 3.3.3
     dev: true
 
@@ -7749,7 +7749,7 @@ packages:
       groq: 3.18.0
       next: 13.4.7(@babel/core@7.23.2)(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
-      sanity: 3.12.2(@types/node@20.3.1)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.0-rc.6)
+      sanity: 3.12.2(@types/node@18.18.5)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.0-rc.6)
       styled-components: 6.0.0-rc.6(react-dom@18.2.0)(react@18.2.0)
     transitivePeerDependencies:
       - supports-color
@@ -8227,27 +8227,27 @@ packages:
       '@babel/runtime': 7.23.2
     dev: false
 
-  /postcss-import@15.1.0(postcss@8.4.24):
+  /postcss-import@15.1.0(postcss@8.4.31):
     resolution: {integrity: sha512-hpr+J05B2FVYUAXHeK1YyI267J/dDDhMU6B6civm8hSY1jYJnBXxzKDKDswzJmtLHryrjhnDjqqp/49t8FALew==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       postcss: ^8.0.0
     dependencies:
-      postcss: 8.4.24
+      postcss: 8.4.31
       postcss-value-parser: 4.2.0
       read-cache: 1.0.0
       resolve: 1.22.8
 
-  /postcss-js@4.0.1(postcss@8.4.24):
+  /postcss-js@4.0.1(postcss@8.4.31):
     resolution: {integrity: sha512-dDLF8pEO191hJMtlHFPRa8xsizHaM82MLfNkUHdUtVEV3tgTp5oj+8qbEqYM57SLfc74KSbw//4SeJma2LRVIw==}
     engines: {node: ^12 || ^14 || >= 16}
     peerDependencies:
       postcss: ^8.4.21
     dependencies:
       camelcase-css: 2.0.1
-      postcss: 8.4.24
+      postcss: 8.4.31
 
-  /postcss-load-config@4.0.1(postcss@8.4.24):
+  /postcss-load-config@4.0.1(postcss@8.4.31):
     resolution: {integrity: sha512-vEJIc8RdiBRu3oRAI0ymerOn+7rPuMvRXslTvZUKZonDHFIczxztIyJ1urxM1x9JXEikvpWWTUUqal5j/8QgvA==}
     engines: {node: '>= 14'}
     peerDependencies:
@@ -8260,16 +8260,16 @@ packages:
         optional: true
     dependencies:
       lilconfig: 2.1.0
-      postcss: 8.4.24
+      postcss: 8.4.31
       yaml: 2.3.3
 
-  /postcss-nested@6.0.1(postcss@8.4.24):
+  /postcss-nested@6.0.1(postcss@8.4.31):
     resolution: {integrity: sha512-mEp4xPMi5bSWiMbsgoPfcP74lsWLHkQbZc3sY+jWYd65CUwXrUaTp0fmNpa01ZcETKlIgUdFN/MpS2xZtqL9dQ==}
     engines: {node: '>=12.0'}
     peerDependencies:
       postcss: ^8.2.14
     dependencies:
-      postcss: 8.4.24
+      postcss: 8.4.31
       postcss-selector-parser: 6.0.13
 
   /postcss-selector-parser@6.0.13:
@@ -8290,14 +8290,6 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
     dev: false
-
-  /postcss@8.4.24:
-    resolution: {integrity: sha512-M0RzbcI0sO/XJNucsGjvWU9ERWxb/ytp1w6dKtxTKgixdtQDq4rmx/g8W1hnaheq9jgwL/oyEdH5Bc4WwJKMqg==}
-    engines: {node: ^10 || ^12 || >=14}
-    dependencies:
-      nanoid: 3.3.6
-      picocolors: 1.0.0
-      source-map-js: 1.0.2
 
   /postcss@8.4.31:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
@@ -8364,16 +8356,16 @@ packages:
       fast-diff: 1.3.0
     dev: true
 
-  /prettier-plugin-tailwindcss@0.3.0(prettier@2.8.8):
-    resolution: {integrity: sha512-009/Xqdy7UmkcTBpwlq7jsViDqXAYSOMLDrHAdTMlVZOrKfM2o9Ci7EMWTMZ7SkKBFTG04UM9F9iM2+4i6boDA==}
-    engines: {node: '>=12.17.0'}
+  /prettier-plugin-tailwindcss@0.5.6(prettier@2.8.8):
+    resolution: {integrity: sha512-2Xgb+GQlkPAUCFi3sV+NOYcSI5XgduvDBL2Zt/hwJudeKXkyvRS65c38SB0yb9UB40+1rL83I6m0RtlOQ8eHdg==}
+    engines: {node: '>=14.21.3'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
       '@prettier/plugin-pug': '*'
       '@shopify/prettier-plugin-liquid': '*'
       '@shufo/prettier-plugin-blade': '*'
       '@trivago/prettier-plugin-sort-imports': '*'
-      prettier: '>=2.2.0'
+      prettier: ^3.0
       prettier-plugin-astro: '*'
       prettier-plugin-css-order: '*'
       prettier-plugin-import-sort: '*'
@@ -9111,7 +9103,7 @@ packages:
       diff-match-patch: 1.0.5
     dev: false
 
-  /sanity@3.12.2(@types/node@20.3.1)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.0-rc.6):
+  /sanity@3.12.2(@types/node@18.18.5)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.0-rc.6):
     resolution: {integrity: sha512-IAm/XrZu+eV/VKft7gVbDTmrKjNuA913yC5z2U5HDFQCuILYQkoy059Q7Xq9CL216ZJ2olTKX5MCnQM/nuyBfQ==}
     engines: {node: '>=14.18.0'}
     hasBin: true
@@ -9225,7 +9217,7 @@ packages:
       use-device-pixel-ratio: 1.1.2(react@18.2.0)
       use-hot-module-reload: 1.0.3(react@18.2.0)
       use-sync-external-store: 1.2.0(react@18.2.0)
-      vite: 4.4.11(@types/node@20.3.1)
+      vite: 4.4.11(@types/node@18.18.5)
       yargs: 17.7.2
     transitivePeerDependencies:
       - '@types/node'
@@ -9608,7 +9600,7 @@ packages:
     resolution: {integrity: sha512-JJS4Bzx4LAzS8cTy26wqCdRQmhUtyV2XjFXfFTXa+W+Won2PXEWu85RpROi1ZN6pNFcWH7xrhXVW0OfCxUmwwA==}
     engines: {node: '>=12.*'}
     dependencies:
-      '@types/node': 20.3.1
+      '@types/node': 18.18.5
       qs: 6.11.2
     dev: false
 
@@ -9641,7 +9633,7 @@ packages:
       '@emotion/unitless': 0.8.1
       '@types/stylis': 4.2.1
       css-to-react-native: 3.2.0
-      postcss: 8.4.24
+      postcss: 8.4.31
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       shallowequal: 1.1.0
@@ -9746,11 +9738,11 @@ packages:
       normalize-path: 3.0.0
       object-hash: 3.0.0
       picocolors: 1.0.0
-      postcss: 8.4.24
-      postcss-import: 15.1.0(postcss@8.4.24)
-      postcss-js: 4.0.1(postcss@8.4.24)
-      postcss-load-config: 4.0.1(postcss@8.4.24)
-      postcss-nested: 6.0.1(postcss@8.4.24)
+      postcss: 8.4.31
+      postcss-import: 15.1.0(postcss@8.4.31)
+      postcss-js: 4.0.1(postcss@8.4.31)
+      postcss-load-config: 4.0.1(postcss@8.4.31)
+      postcss-nested: 6.0.1(postcss@8.4.31)
       postcss-selector-parser: 6.0.13
       resolve: 1.22.8
       sucrase: 3.34.0
@@ -10205,7 +10197,7 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: false
 
-  /vite@4.4.11(@types/node@20.3.1):
+  /vite@4.4.11(@types/node@18.18.5):
     resolution: {integrity: sha512-ksNZJlkcU9b0lBwAGZGGaZHCMqHsc8OpgtoYhsQ4/I2v5cnpmmmqe5pM4nv/4Hn6G/2GhTdj0DhZh2e+Er1q5A==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -10233,7 +10225,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.3.1
+      '@types/node': 18.18.5
       esbuild: 0.18.20
       postcss: 8.4.31
       rollup: 3.29.4
