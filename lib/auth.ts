@@ -1,5 +1,3 @@
-'use service'
-
 import { NextAuthOptions, User, Session } from 'next-auth'
 import { PrismaAdapter } from '@auth/prisma-adapter'
 import CredentialProvider from 'next-auth/providers/credentials'
@@ -7,7 +5,7 @@ import GoogleProvider from 'next-auth/providers/google'
 import bcrypt from 'bcryptjs'
 import prisma from '../prisma/prisma'
 
-export interface MySession extends Session {
+export interface ISession extends User {
   user: {
     id: string
     name: string
@@ -15,20 +13,18 @@ export interface MySession extends Session {
   }
 }
 
-interface IMyUser extends User {
-  id: string
-  name: string
-  email: string
-}
-
 function getGoogleCredentials(): { clientId: string; clientSecret: string } {
   const clientId = process.env.GOOGLE_CLIENT_ID!
   const clientSecret = process.env.GOOGLE_CLIENT_SECRET!
-  if (!clientId || clientId.length === 0) {
+  if (!clientId || clientId.length === 0 || clientSecret.length === undefined) {
     throw new Error('Missing GOOGLE_CLIENT_ID')
   }
 
-  if (!clientSecret || clientSecret.length === 0) {
+  if (
+    !clientSecret ||
+    clientSecret.length === 0 ||
+    clientSecret.length === undefined
+  ) {
     throw new Error('Missing GOOGLE_CLIENT_SECRET')
   }
 
@@ -50,6 +46,13 @@ export const authOptions: NextAuthOptions = {
       id: 'google',
       clientId: getGoogleCredentials().clientId,
       clientSecret: getGoogleCredentials().clientSecret,
+      authorization: {
+        params: {
+          prompt: 'consent',
+          access_type: 'offline',
+          response_type: 'code',
+        },
+      },
     }),
     CredentialProvider({
       id: 'credentials',
@@ -59,18 +62,18 @@ export const authOptions: NextAuthOptions = {
         password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials, req): Promise<any> {
-        console.log('Authorize method', credentials)
+        // console.log('Authorize method', credentials)
 
         if (!credentials?.email || !credentials?.password)
           throw new Error('Dados de Login necessários')
 
-        const user = await prisma!.user.findUnique({
+        const user = await prisma.user.findUnique({
           where: {
             email: credentials?.email,
           },
         })
 
-        console.log('USER', user)
+        // console.log('USER', user)
 
         if (!user || !user.hashedPassword) {
           throw new Error('Usuários não registrado através de credenciais')
@@ -87,14 +90,15 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   callbacks: {
-    async session({ token, session, user }) {
+    async session({ token, session, user }): Promise<Session> {
       if (token) {
-        session.user = token.user as IMyUser
+        session.user!.email = token.email!
       }
+
       return Promise.resolve(session)
     },
     async jwt({ token, user }) {
-      const dbUser = await prisma!.user.findFirst({
+      const dbUser = await prisma.user.findFirst({
         where: {
           email: token.email,
         },
@@ -112,35 +116,6 @@ export const authOptions: NextAuthOptions = {
         picture: dbUser.image,
       }
     },
-    // async signIn({ user, account }) {
-    //   if (account.provider === 'google') {
-    //     const { name, email } = user
-    //     try {
-    //       const userExists = await prisma!.user.findUnique(email)
-
-    //       if (!userExists) {
-    //         const res = await fetch('/api/register', {
-    //           method: 'POST',
-    //           headers: {
-    //             'Content-Type': 'application/json',
-    //           },
-    //           body: JSON.stringify({
-    //             name,
-    //             email,
-    //           }),
-    //         })
-
-    //         if (res.ok) {
-    //           return user
-    //         }
-    //       }
-    //     } catch (error) {
-    //       console.log(error)
-    //     }
-    //   }
-
-    //   return user
-    // },
   },
   debug: process.env.NODE_ENV === 'development',
   pages: {
