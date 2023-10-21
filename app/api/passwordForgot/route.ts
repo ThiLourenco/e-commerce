@@ -5,7 +5,7 @@ import { randomUUID } from 'crypto'
 import nodemailer from 'nodemailer'
 import { render } from '@react-email/render'
 import { NextRequest, NextResponse } from 'next/server'
-import { redirect } from 'next/navigation'
+// import { redirect } from 'next/navigation'
 import { ResetPasswordEmail } from 'components/send-mail'
 
 const DOMAIN = process.env.DOMAIN || 'http://localhost:3000'
@@ -80,5 +80,5 @@ export async function POST(request: NextRequest, response: NextResponse) {
   }
 
   await transporter.sendMail(messageData)
-  redirect('/forgot-password/success')
+  // redirect('/forgot-password/success')
 }

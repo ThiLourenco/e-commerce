@@ -5,7 +5,7 @@ import prisma from '@/prisma/prisma'
 import { hash } from 'bcryptjs'
 // eslint-disable-next-line import/no-named-default
 import dayjs from 'dayjs'
-import { redirect } from 'next/navigation'
+// import { redirect } from 'next/navigation'
 
 interface IPasswordReset {
   password: string
@@ -80,5 +80,5 @@ export async function POST(request: NextRequest, response: NextResponse) {
     }
   }
 
-  redirect('/password-reset/success')
+  // redirect('/password-reset/success')
 }
