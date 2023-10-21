@@ -56,6 +56,7 @@ export default function ForgotPassword() {
       }
       if (handleForgotEmail.ok) {
         reset()
+        setIsSent(true)
       } else {
         console.log('Falha no registro do usuário.')
         setFormError('email', {
@@ -66,7 +67,6 @@ export default function ForgotPassword() {
     } catch (error) {
       console.error('Erro durante o registro:', error)
     }
-    setIsSent(true)
   }
 
   return (
@@ -107,7 +107,7 @@ export default function ForgotPassword() {
             {isSent ? (
               <div
                 id="alert-border-3"
-                className="mb-4 flex border-t-4 border-green-300 bg-transparent p-4 text-green-600 dark:border-green-800 dark:bg-transparent dark:text-green-400"
+                className="mb-4 flex border-t-4 border-green-600 bg-transparent p-4 text-green-600 dark:border-green-800 dark:bg-transparent dark:text-green-400"
                 role="alert"
               >
                 <svg

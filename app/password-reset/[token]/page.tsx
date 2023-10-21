@@ -77,8 +77,8 @@ const PasswordReset: NextPage = () => {
       )
 
       if (responseResetPassword.status === 200) {
-        console.log(responseResetPassword)
         reset()
+        setIsSent(true)
       } else {
         console.log('Falha no processo de redefinição da senha.')
 
@@ -90,7 +90,6 @@ const PasswordReset: NextPage = () => {
     } catch (error) {
       console.error('Erro durante o registro:', error)
     }
-    setIsSent(true)
   }
 
   return (
@@ -177,7 +176,7 @@ const PasswordReset: NextPage = () => {
           {isSent ? (
             <div
               id="alert-border-3"
-              className="mb-4 flex border-t-4 border-green-300 bg-transparent p-4 text-green-600 dark:border-green-800 dark:bg-transparent dark:text-green-400"
+              className="mb-4 flex border-t-4 border-green-600 bg-transparent p-4 text-green-600 dark:border-green-800 dark:bg-transparent dark:text-green-400"
               role="alert"
             >
               <svg
