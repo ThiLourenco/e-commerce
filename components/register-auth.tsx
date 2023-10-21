@@ -60,8 +60,6 @@ export const UserRegisterForm = () => {
         body: JSON.stringify({ email }),
       })
 
-      // const user = await responseUserExists.json()
-      // console.log(responseUserExists)
       if (
         responseUserExists.status === 400 &&
         responseUserExists.ok === false
@@ -253,12 +251,6 @@ export const UserRegisterForm = () => {
             )}
             Registrar
           </Button>
-          <span className="m-2 text-right text-sm">
-            Já possui uma conta?{' '}
-            <Link href={'/login'} className="underline hover:text-gray-400">
-              Entrar
-            </Link>
-          </span>
         </form>
         <div className="relative">
           <div className="absolute inset-0 flex items-center">
@@ -303,6 +295,12 @@ export const UserRegisterForm = () => {
           </svg>
           <span className="ml-3">Faça login no Google</span>
         </Button>
+        <span className="mt-5 text-right text-sm">
+          Já possui uma conta?{' '}
+          <Link href={'/login'} className="underline hover:text-gray-400">
+            Entrar
+          </Link>
+        </span>
       </div>
     </div>
   )
