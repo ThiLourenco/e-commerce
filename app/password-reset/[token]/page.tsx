@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { NextPage } from 'next'
-
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
@@ -11,6 +10,7 @@ import { Button } from 'components/ui/button'
 import { Input } from 'components/ui/input'
 import { Label } from 'components/ui/label'
 import { FiArrowLeft } from 'react-icons/fi'
+import { useToast } from 'components/ui/use-toast'
 
 const PasswordResetFormSchema = z
   .object({
@@ -36,7 +36,7 @@ type FormDataPasswordReset = z.infer<typeof PasswordResetFormSchema>
 const PasswordReset: NextPage = () => {
   const [isSent, setIsSent] = useState(false)
   const [isPasswordVisible, setIsPasswordVisible] = useState(false)
-
+  const { toast } = useToast()
   const {
     register,
     handleSubmit,
@@ -79,6 +79,11 @@ const PasswordReset: NextPage = () => {
       if (responseResetPassword.status === 200) {
         reset()
         setIsSent(true)
+        toast({
+          title: 'Senha Redefinida com sucesso!!',
+          description: 'Realize o login com a nova senha criada.',
+          variant: 'default',
+        })
       } else {
         console.log('Falha no processo de redefinição da senha.')
 

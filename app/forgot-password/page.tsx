@@ -5,11 +5,11 @@ import { useState } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
-// import { resetPassword } from './_action'
 import { Input } from 'components/ui/input'
 import { Button } from 'components/ui/button'
 import { Label } from 'components/ui/label'
 import { FiArrowLeft } from 'react-icons/fi'
+import { useToast } from 'components/ui/use-toast'
 
 const ForgotPasswordSchema = z.object({
   email: z.string().email('Digite um e-mail válido: johndoe@example.com.'),
@@ -19,6 +19,7 @@ type FormDataForgotPassword = z.infer<typeof ForgotPasswordSchema>
 
 export default function ForgotPassword() {
   const [isSent, setIsSent] = useState(false)
+  const { toast } = useToast()
   const {
     register,
     handleSubmit,
@@ -57,6 +58,11 @@ export default function ForgotPassword() {
       if (handleForgotEmail.ok) {
         reset()
         setIsSent(true)
+        toast({
+          title: 'E-mail enviado com sucesso',
+          description: 'Acesse o seu e-mail.',
+          variant: 'default',
+        })
       } else {
         console.log('Falha no registro do usuário.')
         setFormError('email', {

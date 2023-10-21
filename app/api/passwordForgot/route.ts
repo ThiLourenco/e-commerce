@@ -15,6 +15,7 @@ const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   port: 587,
   secure: false,
+  from: '<security@thilourenco.noreply>',
   auth: {
     user: process.env.EMAIL_MAIL!,
     pass: process.env.EMAIL_PASSWORD!,
@@ -74,7 +75,7 @@ export async function POST(request: NextRequest, response: NextResponse) {
     // }
 
     const messageData = {
-      from: 'Store-88 Security <security@thilourenco.noreply>',
+      from: 'Store 88 Security',
       to: user.email!,
       subject: 'Store 88 - Redefinição de senha',
       html: emailHtml,
