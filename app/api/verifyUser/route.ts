@@ -27,13 +27,16 @@ export async function POST(request: NextRequest, response: NextResponse) {
         return NextResponse.json(userExists, { status: 200 })
       } else {
         return NextResponse.json(
-          { error: 'E-mail já existente.' },
+          { error: 'User already exists.' },
           { status: 400 },
         )
       }
     } catch (error) {
-      console.error('Erro ao verificar usuário:', error)
-      return NextResponse.json({ error: 'Erro ao verificar usuário' })
+      console.error('Error:', error)
+      return NextResponse.json(
+        { error: 'Error verifying user.' },
+        { status: 400 },
+      )
     }
   } else {
     return NextResponse.json({ error: 'Method not allowed' }, { status: 405 })

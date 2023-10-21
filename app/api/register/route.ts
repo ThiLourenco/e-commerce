@@ -15,7 +15,9 @@ export async function POST(request: NextRequest, response: NextResponse) {
   console.log('ROUTE HANDLER', data)
 
   if (!name || !email || !password) {
-    return NextResponse.json('Dados inválidos.', { status: 400 })
+    return NextResponse.json('Failed to register user, check your details.', {
+      status: 400,
+    })
   }
 
   const isUserExists = await prisma!.user.findUnique({
@@ -25,7 +27,7 @@ export async function POST(request: NextRequest, response: NextResponse) {
   })
 
   if (isUserExists) {
-    return NextResponse.json({ error: 'E-mail já existente.' }, { status: 400 })
+    return NextResponse.json({ error: 'User already exists.' }, { status: 400 })
   }
 
   const hashedPassword = await bcrypt.hash(password, 10)

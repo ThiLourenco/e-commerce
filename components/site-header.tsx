@@ -73,7 +73,9 @@ export function SiteHeader() {
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={() => signOut({ callbackUrl: '/login' })}
+                onClick={() =>
+                  signOut({ callbackUrl: '/login', redirect: false })
+                }
               >
                 Sair
               </Button>

@@ -36,41 +36,32 @@ export const UserLoginForm = () => {
   })
 
   const onSubmit = async (data: FormDataLogin) => {
-    // event.preventDefault()
+    const response = await signIn<'credentials'>('credentials', {
+      email: data.email,
+      password: data.password,
+      redirect: false,
+    })
 
-    try {
-      const response = await signIn<'credentials'>('credentials', {
-        email: data.email,
-        password: data.password,
-        redirect: false,
-      })
-
-      if (response?.error) {
-        // Em caso de erro, defina a mensagem de erro no campo relevante
-        if (
-          response.error === 'InvalidCredentials' &&
-          response.status === 401
-        ) {
-          setFormError('email', {
-            type: 'required',
-            message: 'E-mail e/ou Senha inválido(s).',
-          })
-
-          setFormError('password', {
-            type: 'manual',
-            message: 'E-mail e/ou Senha inválido(s).',
-          })
-        }
-      } else {
-        toast({
-          title: 'Seja bem vindo(a) !!',
-          description: 'Login realizado com sucesso.',
-          variant: 'default',
+    if (response?.error) {
+      // Em caso de erro, defina a mensagem de erro no campo relevante
+      if (response.error === 'InvalidCredentials' && response.status === 401) {
+        setFormError('email', {
+          type: 'required',
+          message: 'E-mail e/ou Senha inválido(s).',
         })
-        router.push('/dashboard')
+
+        setFormError('password', {
+          type: 'manual',
+          message: 'E-mail e/ou Senha inválido(s).',
+        })
       }
-    } catch (err) {
-      console.error('Erro inesperado:', err)
+    } else {
+      toast({
+        title: 'Seja bem vindo(a) !!',
+        description: 'Login realizado com sucesso.',
+        variant: 'default',
+      })
+      router.push('/dashboard')
     }
   }
 
@@ -179,7 +170,15 @@ export const UserLoginForm = () => {
               {errors.password?.message}
             </span>
           </div>
-
+          <span className="mb-1 text-right text-sm">
+            Esqueceu a senha ?{' '}
+            <Link
+              href={'/forgot-password'}
+              className="underline hover:text-gray-400"
+            >
+              Redefinir senha
+            </Link>
+          </span>
           <Button
             type="submit"
             className="ease flex items-center justify-center rounded-md 
@@ -192,12 +191,6 @@ export const UserLoginForm = () => {
           >
             Entrar
           </Button>
-          <span className="m-2 text-right text-sm">
-            Não tem uma conta ?{' '}
-            <Link href={'/register'} className="underline hover:text-gray-400">
-              Cadastre aqui
-            </Link>
-          </span>
         </form>
         <div className="relative">
           <div className="absolute inset-0 flex items-center">
@@ -242,6 +235,12 @@ export const UserLoginForm = () => {
           </svg>
           <span className="ml-3">Faça login no Google</span>
         </Button>
+        <span className="mt-5 text-right text-sm">
+          Não tem uma conta ?{' '}
+          <Link href={'/register'} className="underline hover:text-gray-400">
+            Cadastre-se aqui
+          </Link>
+        </span>
       </div>
     </div>
   )

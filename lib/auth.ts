@@ -61,6 +61,7 @@ export const authOptions: NextAuthOptions = {
         email: { label: 'email', type: 'text' },
         password: { label: 'Password', type: 'password' },
       },
+
       async authorize(credentials, req): Promise<any> {
         // console.log('Authorize method', credentials)
 
@@ -73,10 +74,9 @@ export const authOptions: NextAuthOptions = {
           },
         })
 
-        // console.log('USER', user)
-
         if (!user || !user.hashedPassword) {
-          throw new Error('Usuários não registrado através de credenciais')
+          console.log('Usuário não cadastrado')
+          throw new Error('Usuário não registrado através de credenciais')
         }
 
         const matchPassword = await bcrypt.compare(
