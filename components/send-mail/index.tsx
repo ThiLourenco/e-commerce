@@ -1,7 +1,9 @@
 import {
   Body,
   Container,
+  Heading,
   Head,
+  Hr,
   Html,
   Img,
   Link,
@@ -33,6 +35,8 @@ export const ResetPasswordEmail: React.FC<
             height="33"
             alt="Store-88"
           />
+
+          <Heading style={heading}>Store 88</Heading>
           <Section>
             <Text style={text}>Olá {user},</Text>
             <Text style={text}>
@@ -50,8 +54,34 @@ export const ResetPasswordEmail: React.FC<
               Para manter sua conta segura, não encaminhe este e-mail para
               ninguém.
             </Text>
-            <Text style={text}>Equipe Store 88</Text>
           </Section>
+          <Text style={paragraph}>
+            Atenciosamente,
+            <br />- Store 88
+          </Text>
+          <Hr style={hr} />
+          <Text style={{ textAlign: 'center', color: '#706a7b' }}>
+            <Img
+              src={`${baseUrl}/logo.png`}
+              width={30}
+              height={30}
+              style={{
+                WebkitFilter: 'grayscale(100%)',
+                filter: 'grayscale(100%)',
+                margin: '20px 0',
+              }}
+            />
+            © 2023{' '}
+            <Link
+              style={{ color: '#706a7b', textDecoration: 'underline' }}
+              target="_blank"
+              referrerPolicy="no-referrer"
+              href="https://thilourenco.dev.br/"
+            >
+              thilourenco.dev
+            </Link>{' '}
+            All Rights Reserved <br />
+          </Text>
         </Container>
       </Body>
     </Html>
@@ -80,6 +110,11 @@ const text = {
   lineHeight: '26px',
 }
 
+const paragraph = {
+  fontSize: '16px',
+  lineHeight: '26px',
+}
+
 const button = {
   backgroundColor: '#5c04a4',
   borderRadius: '4px',
@@ -91,4 +126,15 @@ const button = {
   display: 'block',
   width: '210px',
   padding: '14px 7px',
+}
+
+const hr = {
+  borderColor: '#dddddd',
+  marginTop: '48px',
+}
+
+const heading = {
+  fontSize: '28px',
+  fontWeight: 'bold',
+  marginTop: '48px',
 }

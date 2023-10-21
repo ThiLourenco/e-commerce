@@ -58,7 +58,7 @@ export const UserLoginForm = () => {
     } else {
       toast({
         title: 'Seja bem vindo(a) !!',
-        description: 'Login realizado com sucesso.',
+        description: 'Login realizado.',
         variant: 'default',
       })
       router.push('/dashboard')

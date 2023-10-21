@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { NextPage } from 'next'
-
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
@@ -11,6 +10,7 @@ import { Button } from 'components/ui/button'
 import { Input } from 'components/ui/input'
 import { Label } from 'components/ui/label'
 import { FiArrowLeft } from 'react-icons/fi'
+import { useToast } from 'components/ui/use-toast'
 
 const PasswordResetFormSchema = z
   .object({
@@ -36,7 +36,7 @@ type FormDataPasswordReset = z.infer<typeof PasswordResetFormSchema>
 const PasswordReset: NextPage = () => {
   const [isSent, setIsSent] = useState(false)
   const [isPasswordVisible, setIsPasswordVisible] = useState(false)
-
+  const { toast } = useToast()
   const {
     register,
     handleSubmit,
@@ -77,8 +77,13 @@ const PasswordReset: NextPage = () => {
       )
 
       if (responseResetPassword.status === 200) {
-        console.log(responseResetPassword)
         reset()
+        setIsSent(true)
+        toast({
+          title: 'Senha Redefinida com sucesso!!',
+          description: 'Realize o login com a nova senha criada.',
+          variant: 'default',
+        })
       } else {
         console.log('Falha no processo de redefinição da senha.')
 
@@ -90,7 +95,6 @@ const PasswordReset: NextPage = () => {
     } catch (error) {
       console.error('Erro durante o registro:', error)
     }
-    setIsSent(true)
   }
 
   return (
@@ -177,7 +181,7 @@ const PasswordReset: NextPage = () => {
           {isSent ? (
             <div
               id="alert-border-3"
-              className="mb-4 flex border-t-4 border-green-300 bg-transparent p-4 text-green-600 dark:border-green-800 dark:bg-transparent dark:text-green-400"
+              className="mb-4 flex border-t-4 border-green-600 bg-transparent p-4 text-green-600 dark:border-green-800 dark:bg-transparent dark:text-green-400"
               role="alert"
             >
               <svg
