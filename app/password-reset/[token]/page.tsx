@@ -11,6 +11,7 @@ import { Input } from 'components/ui/input'
 import { Label } from 'components/ui/label'
 import { FiArrowLeft } from 'react-icons/fi'
 import { useToast } from 'components/ui/use-toast'
+import { Loader2 } from 'lucide-react'
 
 const PasswordResetFormSchema = z.object({
   confirmPassword: z
@@ -206,10 +207,11 @@ const PasswordReset: NextPage = () => {
             dark:hover:border-black enabled:dark:hover:border-green-500 enabled:dark:border-green-700 enabled:dark:bg-green-700 enabled:dark:text-white enabled:dark:hover:bg-green-500
             enabled:dark:hover:text-white
             "
-            disabled={isSubmitting}
             title="Redefinir"
+            disabled={isSubmitting}
           >
-            Redefinir Senha
+            {isSent && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+            {isSent ? 'Carregando...' : 'Redefinir Senha'}
           </Button>
           <span className="text-sm flex items-center">
             <Link href="/login" className="flex items-center gap-2">

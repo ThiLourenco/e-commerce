@@ -10,6 +10,7 @@ import { Button } from 'components/ui/button'
 import { Label } from 'components/ui/label'
 import { FiArrowLeft } from 'react-icons/fi'
 import { useToast } from 'components/ui/use-toast'
+import { Loader2 } from 'lucide-react'
 
 const ForgotPasswordSchema = z.object({
   email: z.string().email('Digite um e-mail válido: johndoe@example.com.'),
@@ -144,7 +145,8 @@ export default function ForgotPassword() {
             "
               disabled={isSubmitting}
             >
-              Redefinir
+              {isSent && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+              {isSent ? 'Carregando...' : 'Redefinir'}
             </Button>
             <span className="text-sm flex items-center">
               <Link href="/login" className="flex items-center gap-2">
