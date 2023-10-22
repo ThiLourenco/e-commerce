@@ -21,7 +21,7 @@ Você pode acessá-lo através deste link [Store 88](https://e-commerce-thiloure
 
 ## 📌 Projeto
 
-The e-commerce project is a concrete example of my work in web development, demonstrating my skills and knowledge. This application represents a complete solution for online shopping, covering everything from the customer experience to product administration.
+O projeto e-commerce é um exemplo concreto do meu trabalho em desenvolvimento web, demonstrando as minhas competências e conhecimentos. Este aplicativo representa uma solução completa para compras online, abrangendo desde a experiência do cliente até a administração do produto.
 
 ## 🔍 Índice
 
