@@ -31,11 +31,11 @@ export const inventory: InventoryProduct[] = [
     description: `Conheça sua nova bagagem de mão favorita. Nossa bolsa superdimensionada é feita em lona de algodão encerado durável, resistente e durável, ideal para transportar todas as suas coisas. Este tamanho leva você de e para o mercado do fazendeiro, a academia ou uma escapadela de fim de semana.`,
     price: 16800, // price in smallest currency unit (e.g. cent for USD)
     image:
-      'https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/canvas-tote-bag-1.jpg',
+      'https://cdn.sanity.io/images/d2tfklso/production/b27e36756e9ae90c5ebc303ed12741d002fea7a4-680x850.jpg',
     images: [
-      'https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/canvas-tote-bag-1.jpg',
-      'https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/canvas-tote-bag-2.jpg',
-      'https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/canvas-tote-bag-3.jpg',
+      'https://cdn.sanity.io/images/d2tfklso/production/b27e36756e9ae90c5ebc303ed12741d002fea7a4-680x850.jpg',
+      'https://cdn.sanity.io/images/d2tfklso/production/47d9e52a0e64d0ff8051338f91e63ed718d8e1e0-680x850.jpg',
+      'https://cdn.sanity.io/images/d2tfklso/production/32827a2fb6fb21fb9adab6ff4a8f4a0cac4aaf47-680x850.jpg',
     ],
     sizes: ['unico'],
     categories: ['bolsas'],
@@ -51,11 +51,11 @@ export const inventory: InventoryProduct[] = [
     description: `Conheça sua nova bagagem de mão favorita. Nossa bolsa superdimensionada é feita em lona de algodão encerado durável, resistente e durável, ideal para transportar todas as suas coisas. Este tamanho leva você de e para o mercado do fazendeiro, a academia ou uma escapadela de fim de semana.`,
     price: 14500,
     image:
-      'https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/khaki-tote-bag-1.jpg',
+      'https://cdn.sanity.io/images/d2tfklso/production/5bf60e94613bcacc939e510e67a319fb6648a3f5-680x850.jpg',
     images: [
-      'https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/khaki-tote-bag-1.jpg',
-      'https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/khaki-tote-bag-2.jpg',
-      'https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/khaki-tote-bag-3.jpg',
+      'https://cdn.sanity.io/images/d2tfklso/production/5bf60e94613bcacc939e510e67a319fb6648a3f5-680x850.jpg',
+      'https://cdn.sanity.io/images/d2tfklso/production/4f86ba8ba779776820152ab5b2049ca47d8f7b21-680x850.jpg',
+      'https://cdn.sanity.io/images/d2tfklso/production/91973874fc063e2805f3772410a8ebcf64168d59-680x850.jpg',
     ],
     sizes: ['unico'],
     categories: ['bolsas'],
@@ -71,9 +71,9 @@ export const inventory: InventoryProduct[] = [
     description: `Fundada no Japão e agora com sede nos EUA, a Snow Peak fabrica equipamentos premium para atividades ao ar livre inspirados na região montanhosa de Niigata, no Japão, desde 1958. Fabricadas com materiais duráveis, essas luvas são isoladas com penas de pato para manter suas mãos aquecidas, não importa através qual vórtice polar o seu dia o leva.`,
     price: 13999,
     image:
-      'https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/down-mittens-1.jpg',
+      'https://cdn.sanity.io/images/d2tfklso/production/5a073e0baef2c640b6bc8a77f837e034f1eb9059-680x850.jpg',
     images: [
-      'https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/down-mittens-1.jpg',
+      'https://cdn.sanity.io/images/d2tfklso/production/5a073e0baef2c640b6bc8a77f837e034f1eb9059-680x850.jpg',
     ],
     sizes: ['p', 'm', 'g', 'gg'],
     categories: ['luvas'],
@@ -91,10 +91,10 @@ export const inventory: InventoryProduct[] = [
     description: `Estes são óculos de sol atemporais projetados na Califórnia e feitos à mão no Japão por mestres artesãos. As armações Brooks são feitas com ponte keyhole, um dos muitos detalhes que a marca inclui em sua construção.`,
     price: 42000,
     image:
-      'https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/brooks-sunglasses-1.jpg',
+      'https://cdn.sanity.io/images/d2tfklso/production/65e5609be629d64169c0b9c9b019355dbf70b9e2-680x850.jpg',
     images: [
-      'https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/brooks-sunglasses-1.jpg',
-      'https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/brooks-sunglasses-2.jpg',
+      'https://cdn.sanity.io/images/d2tfklso/production/65e5609be629d64169c0b9c9b019355dbf70b9e2-680x850.jpg',
+      'https://cdn.sanity.io/images/d2tfklso/production/ebc97cd62e48ab9ae77c500ca97c693a42b5990b-680x850.jpg',
     ],
     sizes: ['unico'],
     categories: ['oculos'],
@@ -110,9 +110,9 @@ export const inventory: InventoryProduct[] = [
     description: `Nossa mais recente coleção de óculos de sol feitos à mão apresenta detalhes como lentes com proteção UV em tonalidades escolhidas especificamente para complementar cada armação, e tudo a um preço que cabe no bolso. Fizemos estes óculos de sol com armações de acetato de inspiração vintage e uma ponte de fechadura.`,
     price: 5599,
     image:
-      'https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/dock-sunglasses-1.jpg',
+      'https://cdn.sanity.io/images/d2tfklso/production/88b9639b32832d4d354a9067826ca08456ba0141-680x850.jpg',
     images: [
-      'https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/dock-sunglasses-1.jpg',
+      'https://cdn.sanity.io/images/d2tfklso/production/88b9639b32832d4d354a9067826ca08456ba0141-680x850.jpg',
     ],
     sizes: ['unico'],
     categories: ['oculos'],

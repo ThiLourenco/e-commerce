@@ -12,24 +12,12 @@ import { Label } from 'components/ui/label'
 import { FiArrowLeft } from 'react-icons/fi'
 import { useToast } from 'components/ui/use-toast'
 
-const PasswordResetFormSchema = z
-  .object({
-    confirmPassword: z
-      .string()
-      .min(6, 'A senha deverá conter no mínimo 6 caracteres.'),
-    password: z
-      .string()
-      .min(6, 'A senha deverá conter no mínimo 6 caracteres.'),
-  })
-  .refine(
-    (data) => {
-      return data.password === data.confirmPassword
-    },
-    {
-      message: 'As senhas devem corresponder!',
-      path: ['confirmPassword', 'password'],
-    },
-  )
+const PasswordResetFormSchema = z.object({
+  confirmPassword: z
+    .string()
+    .min(6, 'A senha deverá conter no mínimo 6 caracteres.'),
+  password: z.string().min(6, 'A senha deverá conter no mínimo 6 caracteres.'),
+})
 
 type FormDataPasswordReset = z.infer<typeof PasswordResetFormSchema>
 
@@ -60,6 +48,14 @@ const PasswordReset: NextPage = () => {
       setFormError('password', {
         type: 'manual',
         message: 'Preencha todos os campos obrigatórios.',
+      })
+      return
+    }
+
+    if (confirmPassword !== password) {
+      setFormError('password', {
+        type: 'manual',
+        message: 'As senhas devem corresponder!',
       })
       return
     }

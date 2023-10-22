@@ -43,7 +43,6 @@ export const UserLoginForm = () => {
     })
 
     if (response?.error) {
-      // Em caso de erro, defina a mensagem de erro no campo relevante
       if (response.error === 'InvalidCredentials' && response.status === 401) {
         setFormError('email', {
           type: 'required',

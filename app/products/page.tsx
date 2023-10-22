@@ -64,7 +64,6 @@ export default async function Page({ searchParams }: Props) {
             <h1 className="text-xl font-bold tracking-tight sm:text-2xl">
               {products.length} resultado{products.length === 1 ? '' : 's'}
             </h1>
-            {/* Product Sort */}
             <ProductSort />
           </div>
 
@@ -81,10 +80,8 @@ export default async function Page({ searchParams }: Props) {
               )}
             >
               <div className="hidden lg:block">
-                {/* Product filters */}
                 <ProductFilters />
               </div>
-              {/* Product grid */}
               <ProductGrid products={products} />
             </div>
           </section>
