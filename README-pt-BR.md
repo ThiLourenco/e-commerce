@@ -16,7 +16,7 @@
 
 ## ☁️ Implantação
 
-Você pode acessá-lo através deste link [Store 88](https://e-commerce-thilourenco.vercel.app/).
+Você pode acessá-lo através deste link <a href=https://e-commerce-thilourenco.vercel.app/ target="_blank">Store 88</a>.
 
 
 ## 📌 Projeto
