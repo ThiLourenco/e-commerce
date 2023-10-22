@@ -23,13 +23,14 @@ const PasswordResetFormSchema = z.object({
 type FormDataPasswordReset = z.infer<typeof PasswordResetFormSchema>
 
 const PasswordReset: NextPage = () => {
+  const [isLoading, setLoading] = useState(false)
   const [isSent, setIsSent] = useState(false)
   const [isPasswordVisible, setIsPasswordVisible] = useState(false)
   const { toast } = useToast()
   const {
     register,
     handleSubmit,
-    formState: { errors, isLoading, isSubmitting },
+    formState: { errors, isSubmitting },
     setError: setFormError,
     reset,
   } = useForm<FormDataPasswordReset>({
@@ -73,6 +74,8 @@ const PasswordReset: NextPage = () => {
         },
       )
 
+      setLoading(true)
+
       if (responseResetPassword.status === 200) {
         reset()
         setIsSent(true)
@@ -92,6 +95,7 @@ const PasswordReset: NextPage = () => {
     } catch (error) {
       console.error('Erro durante o registro:', error)
     }
+    setLoading(false)
   }
 
   return (
@@ -210,8 +214,8 @@ const PasswordReset: NextPage = () => {
             title="Redefinir"
             disabled={isSubmitting}
           >
-            {isSent && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-            {isSent ? 'Carregando...' : 'Redefinir Senha'}
+            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+            {isLoading ? 'Carregando...' : 'Redefinir Senha'}
           </Button>
           <span className="text-sm flex items-center">
             <Link href="/login" className="flex items-center gap-2">

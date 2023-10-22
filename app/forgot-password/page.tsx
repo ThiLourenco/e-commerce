@@ -20,6 +20,7 @@ type FormDataForgotPassword = z.infer<typeof ForgotPasswordSchema>
 
 export default function ForgotPassword() {
   const [isSent, setIsSent] = useState(false)
+  const [isLoading, setLoading] = useState(false)
   const { toast } = useToast()
   const {
     register,
@@ -50,6 +51,7 @@ export default function ForgotPassword() {
         body: JSON.stringify({ email }),
       })
 
+      setLoading(true)
       if (handleForgotEmail.status === 400 && handleForgotEmail.ok === false) {
         setFormError('email', {
           type: 'required',
@@ -74,6 +76,8 @@ export default function ForgotPassword() {
     } catch (error) {
       console.error('Erro durante o registro:', error)
     }
+
+    setLoading(false)
   }
 
   return (
@@ -145,8 +149,8 @@ export default function ForgotPassword() {
             "
               disabled={isSubmitting}
             >
-              {isSent && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-              {isSent ? 'Carregando...' : 'Redefinir'}
+              {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+              {isLoading ? 'Carregando...' : 'Redefinir'}
             </Button>
             <span className="text-sm flex items-center">
               <Link href="/login" className="flex items-center gap-2">
