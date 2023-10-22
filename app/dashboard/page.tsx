@@ -46,9 +46,7 @@ export default function Page() {
   const { data: session } = useSession()
   const router = useRouter()
 
-  // verify if user is authenticated
   if (!session) {
-    // redirect to login page
     router.push('/login')
     return null
   }

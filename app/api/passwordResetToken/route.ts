@@ -83,6 +83,4 @@ export async function POST(request: NextRequest, response: NextResponse) {
       success: false,
     })
   }
-
-  // redirect('/password-reset/success')
 }

@@ -16,7 +16,6 @@ export async function POST(request: NextRequest, response: NextResponse) {
       const { email }: IVerifyUser = data
       console.log('ROUTE HANDLER', data)
 
-      // verify user already exists in database
       const userExists = await prisma!.user.findUnique({
         where: {
           email,

@@ -63,17 +63,6 @@ export async function POST(request: NextRequest, response: NextResponse) {
       ResetPasswordEmail({ token: `${address}`, user: `${user.name}` }),
     )
 
-    // const messageData = {
-    //   from: `Store-88 Security <security@thilourenco.noreply>`,
-    //   to: user.email!,
-    //   subject: 'Store 88 - Redefinição de senha',
-    //   html: `Olá ${user.name}, alguém (espero que você) solicitou a redefinição de senha desta conta. Se você deseja redefinir sua senha, clique aqui: ${PROTOCOL}://${DOMAIN}/password-reset/${token.token}
-
-    //   Por motivos de segurança, este link é válido apenas por quatro horas.
-
-    //   Se você não solicitou essa redefinição, ignore este e-mail.`,
-    // }
-
     const messageData = {
       from: 'Store 88 Security',
       to: user.email!,
@@ -87,8 +76,6 @@ export async function POST(request: NextRequest, response: NextResponse) {
       success: true,
       status: 200,
     })
-
-    // redirect('/forgot-password/success')
   } catch (error) {
     return NextResponse.json({ message: error, success: false, status: 400 })
   }

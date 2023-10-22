@@ -14,10 +14,8 @@ export default function Page() {
             <h2 id="cart-heading" className="sr-only">
               Itens na sua sacola de compras
             </h2>
-            {/* Itens do carrinho */}
             <CartItems />
           </section>
-          {/* Resumo do carrinho */}
           <CartSummary />
         </form>
       </main>
