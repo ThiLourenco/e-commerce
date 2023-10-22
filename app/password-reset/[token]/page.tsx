@@ -23,7 +23,6 @@ const PasswordResetFormSchema = z.object({
 type FormDataPasswordReset = z.infer<typeof PasswordResetFormSchema>
 
 const PasswordReset: NextPage = () => {
-  const [isLoading, setLoading] = useState(false)
   const [isSent, setIsSent] = useState(false)
   const [isPasswordVisible, setIsPasswordVisible] = useState(false)
   const { toast } = useToast()
