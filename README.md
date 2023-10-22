@@ -16,7 +16,7 @@
 
 ## ☁️ Deploy
 
-You can access it through this link [Store 88](https://e-commerce-thilourenco.vercel.app/).
+You can access it through this link <a href=https://e-commerce-thilourenco.vercel.app/ target="_blank">Store 88</a>
 
 
 ## 📌 Project
