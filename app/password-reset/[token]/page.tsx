@@ -23,7 +23,6 @@ const PasswordResetFormSchema = z.object({
 type FormDataPasswordReset = z.infer<typeof PasswordResetFormSchema>
 
 const PasswordReset: NextPage = () => {
-  const [isLoading, setLoading] = useState(false)
   const [isSent, setIsSent] = useState(false)
   const [isPasswordVisible, setIsPasswordVisible] = useState(false)
   const { toast } = useToast()
@@ -74,8 +73,6 @@ const PasswordReset: NextPage = () => {
         },
       )
 
-      setLoading(true)
-
       if (responseResetPassword.status === 200) {
         reset()
         setIsSent(true)
@@ -95,7 +92,6 @@ const PasswordReset: NextPage = () => {
     } catch (error) {
       console.error('Erro durante o registro:', error)
     }
-    setLoading(false)
   }
 
   return (
@@ -121,7 +117,7 @@ const PasswordReset: NextPage = () => {
               id="password"
               autoComplete="new-password"
               placeholder="Digite sua senha"
-              disabled={isLoading}
+              disabled={isSubmitting}
             />
             <Input
               {...register('confirmPassword')}
@@ -130,7 +126,7 @@ const PasswordReset: NextPage = () => {
               name="confirmPassword"
               id="confirmPassword"
               placeholder="Confirme sua senha"
-              disabled={isLoading}
+              disabled={isSubmitting}
             />
             <button
               type="button"
@@ -214,8 +210,8 @@ const PasswordReset: NextPage = () => {
             title="Redefinir"
             disabled={isSubmitting}
           >
-            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-            {isLoading ? 'Carregando...' : 'Redefinir Senha'}
+            {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+            {isSubmitting ? 'Carregando...' : 'Redefinir Senha'}
           </Button>
           <span className="text-sm flex items-center">
             <Link href="/login" className="flex items-center gap-2">
