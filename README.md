@@ -92,7 +92,7 @@ This project makes use of a modern and essential technology stack, including:
 | Remove a Item | &#10004; | Ability of Remove a Item from the Cart |
 | Checkout | &#10004; | Ability to Checkout |
 
-<b>Login Features</b>
+<b>User Features</b>
 
 | Feature  |  Check?       | Description  |
 |----------|:-------------:|:-------------|

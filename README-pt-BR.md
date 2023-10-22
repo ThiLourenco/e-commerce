@@ -91,7 +91,7 @@ Este projeto faz uso de uma pilha de tecnologia moderna e essencial, incluindo:
 | Remover um item | &#10004; | Capacidade de remover um item do carrinho |
 | Finalizar compra | &#10004; | Capacidade de finalizar a compra |
 
-<b>Recursos de login</b>
+<b>Recursos de Usuário</b>
 
 | Características  |  Verificado?       | Descrição  |
 |----------|:-------------:|:-------------|
