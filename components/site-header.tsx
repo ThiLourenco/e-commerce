@@ -57,18 +57,18 @@ export function SiteHeader() {
           </form>
         )}
 
-        <div className="flex items-center space-x-1">
+        <div className="flex items-center space-x-2">
           {pathname !== '/' && !session && (
-            <Link className="flex gap-2 p-2" href={'/login'}>
+            <Link className="flex gap-2 p-2 xs:text-sm" href={'/login'}>
               Meus Pedidos
               <LogInIcon className="h-5 w-5 xs:invisible sm:visible" />
             </Link>
           )}
           {pathname !== '/' && status === 'authenticated' && (
             <>
-              <span>Olá, {session.user?.name}</span>
+              <span className="xs:text-sm">Olá, {session.user?.name}</span>
               <Link className="flex gap-2 p-2" href={'/dashboard'}>
-                Seus pedidos
+                Pedidos
               </Link>
               <Button
                 variant="ghost"

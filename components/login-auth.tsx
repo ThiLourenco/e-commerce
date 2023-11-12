@@ -74,11 +74,11 @@ export const UserLoginForm = () => {
         <h1 className="my-4 text-xl font-bold tracking-wide">
           Faça o seu login
         </h1>
-        <div className="m-5 text-sm text-red-500">
+        {/* <div className="m-5 text-sm text-red-500">
           <h3>Homologação</h3>
           <span>E-mail: johndoe@teste.com - Senha: 123456</span>
-        </div>
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-3">
+        </div> */}
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
           <div>
             <Label
               htmlFor="email"
@@ -88,7 +88,7 @@ export const UserLoginForm = () => {
             </Label>
             <Input
               {...register('email')}
-              className="border border-gray-500 px-4 py-2"
+              className="border border-gray-500 px-4 py-2 mt-1"
               type="email"
               id="email"
               autoCapitalize="none"
@@ -112,7 +112,7 @@ export const UserLoginForm = () => {
             </Label>
             <Input
               {...register('password')}
-              className="border border-gray-500 px-4 py-2"
+              className="border border-gray-500 px-4 py-2 mt-1"
               type={isPasswordVisible ? 'text' : 'password'}
               id="password"
               autoCapitalize="none"
@@ -124,7 +124,7 @@ export const UserLoginForm = () => {
             />
             <button
               type="button"
-              className="absolute inset-y-0 right-0 flex items-center px-4 py-10 text-gray-600"
+              className="absolute inset-y-0 right-0 flex items-center px-4 py-12 text-gray-600"
               onClick={togglePasswordVisibility}
             >
               {' '}
@@ -169,7 +169,7 @@ export const UserLoginForm = () => {
               {errors.password?.message}
             </span>
           </div>
-          <span className="mb-1 text-right text-sm">
+          <span className="text-right text-sm">
             Esqueceu a senha ?{' '}
             <Link
               href={'/forgot-password'}
@@ -181,7 +181,7 @@ export const UserLoginForm = () => {
           <Button
             type="submit"
             className="ease flex items-center justify-center rounded-md 
-            border-2 border-green-700 bg-green-700 px-5 py-3 text-white
+            border-2 border-green-700 bg-green-700 px-5 py-2 text-white
             shadow-md transition hover:border-black enabled:hover:border-green-500 enabled:hover:bg-green-500 enabled:hover:text-white disabled:cursor-not-allowed disabled:opacity-75
             dark:hover:border-black enabled:dark:hover:border-green-500 enabled:dark:border-green-700 enabled:dark:bg-green-700 enabled:dark:text-white enabled:dark:hover:bg-green-500
             enabled:dark:hover:text-white"
