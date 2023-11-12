@@ -52,3 +52,19 @@ model PasswordResetToken {
   user   User   @relation(fields: [userId], references: [id])
   userId String @db.ObjectId
 }
+
+model Payment {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  paymentIntentId String   @unique
+  amount          Int
+  status          String
+  email           String?
+  name            String?
+  city            String?
+  country         String?
+  line1           String?
+  line2           String?
+  postalCode      String?
+  created         Int
+  createdAt       DateTime @default(now())
+}
