@@ -101,7 +101,7 @@ export const UserRegisterForm = () => {
           Faça o seu Registro
         </h1>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-3">
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
           <div>
             <Label
               htmlFor="name"
@@ -112,7 +112,7 @@ export const UserRegisterForm = () => {
             <Input
               {...register('name')}
               disabled={isLoading}
-              className="border border-gray-500 px-4 py-2"
+              className="border border-gray-500 px-4 py-2 mt-1"
               type="text"
               name="name"
               id="name"
@@ -134,7 +134,7 @@ export const UserRegisterForm = () => {
             <Input
               {...register('email')}
               disabled={isLoading}
-              className="border border-gray-500 px-4 py-2"
+              className="border border-gray-500 px-4 py-2 mt-1"
               type="email"
               name="email"
               id="email"
@@ -157,7 +157,7 @@ export const UserRegisterForm = () => {
             </Label>
             <Input
               {...register('password')}
-              className="border border-gray-500 px-4 py-2"
+              className="border border-gray-500 px-4 py-2 mt-1"
               type={isPasswordVisible ? 'text' : 'password'}
               name="password"
               id="password"
