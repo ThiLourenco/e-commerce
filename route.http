@@ -1,0 +1,3 @@
+# GET http://localhost:3000/api/getWebHookData
+GET http://localhost:3000/api/getWebHookData?email=johndoe@teste.com
+
