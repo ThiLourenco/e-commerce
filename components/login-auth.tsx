@@ -74,11 +74,11 @@ export const UserLoginForm = () => {
         <h1 className="my-4 text-xl font-bold tracking-wide">
           Faça o seu login
         </h1>
-        <div className="m-5 text-sm text-red-500">
+        {/* <div className="m-5 text-sm text-red-500">
           <h3>Homologação</h3>
           <span>E-mail: johndoe@teste.com - Senha: 123456</span>
-        </div>
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-3">
+        </div> */}
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5">
           <div>
             <Label
               htmlFor="email"
