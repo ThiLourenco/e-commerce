@@ -106,7 +106,7 @@ This project makes use of a modern and essential technology stack, including:
 
 - [X] **Task #1:** page with list of orders with private route.
 - [X] **Task #2:** authentication flow.
-- [   ] **Task #3:** creating a store user's purchase history, persisting in the database.
+- [X] **Task #3:** creating a store user's purchase history, persisting in the database.
 - [   ] **Task #4:** email order information after purchase.
 - more others...
 

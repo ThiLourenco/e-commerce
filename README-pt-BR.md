@@ -105,7 +105,7 @@ Este projeto faz uso de uma pilha de tecnologia moderna e essencial, incluindo:
 
 - [X] **Tarefa #1:** página com lista de pedidos com rota privada.
 - [X] **Tarefa #2:** fluxo de autenticação.
-- [ ] **Tarefa #3:** criar um histórico de compras do usuário da loja, persistindo no banco de dados.
+- [X] **Tarefa #3:** criar um histórico de compras do usuário da loja, persistindo no banco de dados.
 - [ ] **Tarefa #4:** enviar informações do pedido por e-mail após a compra.
 - carregando...
 
